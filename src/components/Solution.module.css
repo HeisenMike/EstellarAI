@@ -79,6 +79,12 @@
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    .videoPlaceholder {
+        min-height: 400px;
+    }
+}
+
 .videoPlaceholder::before {
     content: 'DEMO VIDEO';
     position: absolute;
