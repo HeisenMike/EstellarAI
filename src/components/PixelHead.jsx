@@ -27,12 +27,12 @@ const PixelHead = () => {
 
             let drawW, drawH;
             if (canvasAspect > imgAspect) {
-                // Larger on mobile (1.1x vs 0.85x)
-                const scale = window.innerWidth < 768 ? 1.1 : 0.85;
+                // Larger on mobile (1.35x vs 0.85x)
+                const scale = window.innerWidth < 768 ? 1.35 : 0.85;
                 drawH = h * scale;
                 drawW = drawH * imgAspect;
             } else {
-                const scale = window.innerWidth < 768 ? 1.1 : 0.85;
+                const scale = window.innerWidth < 768 ? 1.35 : 0.85;
                 drawW = w * scale;
                 drawH = drawW / imgAspect;
             }

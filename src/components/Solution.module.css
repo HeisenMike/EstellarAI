@@ -81,7 +81,7 @@
 
 @media (max-width: 768px) {
     .videoPlaceholder {
-        min-height: 600px;
+        min-height: 400px;
     }
 }
 
