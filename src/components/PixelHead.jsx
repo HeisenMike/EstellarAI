@@ -130,8 +130,14 @@ const PixelHead = () => {
 
                     // Enhanced floating effect (higher amplitude)
                     // Makes the head look "alive" and floating even when formed
-                    const noiseX = Math.sin(time + p.noiseOffset) * 2.5;
-                    const noiseY = Math.cos(time + p.noiseOffset) * 2.5;
+                    let noiseX = Math.sin(time + p.noiseOffset) * 2.5;
+                    let noiseY = Math.cos(time + p.noiseOffset) * 2.5;
+
+                    // Disable noise on mobile for steady image
+                    if (window.innerWidth < 768) {
+                        noiseX = 0;
+                        noiseY = 0;
+                    }
 
                     ctx.fillStyle = p.color;
                     ctx.globalAlpha = 1.0;
