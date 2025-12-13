@@ -27,10 +27,13 @@ const PixelHead = () => {
 
             let drawW, drawH;
             if (canvasAspect > imgAspect) {
-                drawH = h * 0.85;
+                // Larger on mobile (1.1x vs 0.85x)
+                const scale = window.innerWidth < 768 ? 1.1 : 0.85;
+                drawH = h * scale;
                 drawW = drawH * imgAspect;
             } else {
-                drawW = w * 0.85;
+                const scale = window.innerWidth < 768 ? 1.1 : 0.85;
+                drawW = w * scale;
                 drawH = drawW / imgAspect;
             }
 
@@ -101,10 +104,7 @@ const PixelHead = () => {
                 if (entry.isIntersecting) {
                     isVisible = true;
                 } else {
-                    // Only reset on desktop
-                    if (window.innerWidth >= 768) {
-                        isVisible = false;
-                    }
+                    isVisible = false;
                 }
             });
         }, { threshold: 0.1 });
@@ -132,12 +132,6 @@ const PixelHead = () => {
                     // Makes the head look "alive" and floating even when formed
                     let noiseX = Math.sin(time + p.noiseOffset) * 2.5;
                     let noiseY = Math.cos(time + p.noiseOffset) * 2.5;
-
-                    // Disable noise on mobile for steady image
-                    if (window.innerWidth < 768) {
-                        noiseX = 0;
-                        noiseY = 0;
-                    }
 
                     ctx.fillStyle = p.color;
                     ctx.globalAlpha = 1.0;
