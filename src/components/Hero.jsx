@@ -19,7 +19,7 @@ const Hero = () => {
                         <span className={styles.badge}>AI Powered</span>
                     </div>
 
-                    <h1 className={styles.hook}>
+                    <h1 className={styles.title}>
                         The <span className={styles.lightItalic}>All-in-One</span> AI System Ready to Book Your Jobs in 14 Days.
                     </h1>
 

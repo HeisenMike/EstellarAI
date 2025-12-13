@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Empathy.module.css';
+import missedCallImage from '../assets/missed_call_phone.png';
 
 const Empathy = () => {
     return (
@@ -28,7 +29,7 @@ const Empathy = () => {
                             </p>
                         </div>
                         <div className={styles.imageColumn}>
-                            <img src="/src/assets/missed_call_phone.png" alt="Missed Call Notification" className={styles.phoneImage} />
+                            <img src={missedCallImage} alt="Missed Call Notification" className={styles.phoneImage} />
                         </div>
                     </div>
                 </motion.div>
