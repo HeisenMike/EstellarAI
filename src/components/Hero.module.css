@@ -33,6 +33,20 @@
     backdrop-filter: blur(10px);
 }
 
+.title {
+    font-family: 'SuisseIntl', sans-serif;
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 2rem;
+    letter-spacing: -0.04em;
+    padding: 0 10px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .hook {
     font-family: "Inter", "Inter Placeholder", sans-serif;
     font-weight: 600;
@@ -48,7 +62,7 @@
     letter-spacing: -0.02em;
 
     /* Silver Gradient */
-    background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
+    background: linear-gradient(180deg, #FFFFFF 0%, #D0D0D0 45%, #909090 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

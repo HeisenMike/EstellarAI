@@ -42,9 +42,9 @@
 
 .headline {
     font-family: 'SuisseIntl', sans-serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
     font-weight: 700;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
     background-clip: text;
     -webkit-background-clip: text;

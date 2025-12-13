@@ -13,15 +13,15 @@
 
 .headline {
     font-family: 'SuisseIntl', sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 3.5vw, 3rem);
     font-weight: 700;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+    margin-bottom: 1rem;
     background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 
 .accent {
     color: #a46eff;

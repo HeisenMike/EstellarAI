@@ -46,6 +46,8 @@ const blueprintSteps = [
     }
 ];
 
+import PixelHead from './PixelHead';
+
 const Position = () => {
     return (
         <section className={styles.section}>
@@ -66,6 +68,7 @@ const Position = () => {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
                         >
+                            {index === 0 && <PixelHead />}
                             <div className={styles.iconBox}>
                                 {item.icon}
                             </div>

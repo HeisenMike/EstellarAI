@@ -58,9 +58,15 @@
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(20px);
-    transition: all 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s ease, background-color 0.4s ease;
     position: relative;
     overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(40, 40, 50, 0.6);
 }
 
 /* Specific Span Classes */
@@ -85,21 +91,26 @@
     justify-content: center;
     margin-bottom: 1.5rem;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
 }
 
 .iconBox svg {
     width: 36px;
     height: 36px;
     color: #e0e0e0;
-    filter: drop-shadow(0 0 12px rgba(164, 110, 255, 0.8));
+    filter: drop-shadow(0 0 12px rgba(164, 110, 255, 0.5));
     stroke-width: 1.5;
-    transition: all 0.3s ease;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.card:hover .iconBox {
+    border-color: rgba(164, 110, 255, 0.3);
+    background: rgba(164, 110, 255, 0.05);
 }
 
 .card:hover .iconBox svg {
     color: #fff;
-    filter: drop-shadow(0 0 16px rgba(164, 110, 255, 1));
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .stepNum {
@@ -116,7 +127,10 @@
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #fff;
+    background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .desc {
@@ -141,4 +155,15 @@
     padding: 10px;
     border-radius: 8px;
     border-left: 3px solid #a46eff;
+}
+
+/* Ensure content sits above the animated background */
+.iconBox,
+.stepNum,
+.cardTitle,
+.desc,
+.divider,
+.benefit {
+    position: relative;
+    z-index: 2;
 }
