@@ -53,7 +53,7 @@
 
 @media (max-width: 768px) {
     .content {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 }
 
