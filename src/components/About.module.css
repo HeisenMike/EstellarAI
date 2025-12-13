@@ -1,0 +1,65 @@
+.section {
+    padding: 100px 20px;
+    background-color: transparent;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.imageCol {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagePlaceholder {
+    width: 300px;
+    height: 400px;
+    background: #222;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    border: 1px dashed #444;
+}
+
+.textCol {
+    flex: 1.5;
+}
+
+.headline {
+    font-family: 'SuisseIntl', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subheadline {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+.text {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}

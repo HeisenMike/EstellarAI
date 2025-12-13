@@ -1,0 +1,154 @@
+.section {
+    padding: 100px 20px 50px;
+    /* Reduced bottom padding for footer */
+    background: transparent;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.headline {
+    font-family: 'SuisseIntl', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subheadline {
+    font-size: 1.5rem;
+    color: #a46eff;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.text {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.offerBox {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 3rem;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.boxTitle {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.benefitsList {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 2rem;
+    padding: 0 20px;
+}
+
+.benefitsList li {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pricing {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+}
+
+.priceRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #eee;
+    padding: 0 20px;
+}
+
+.strike {
+    text-decoration: line-through;
+    color: #777;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.bold {
+    font-weight: 700;
+    color: #a46eff;
+}
+
+.perks {
+    /* Removed or hidden */
+    display: none;
+}
+
+@keyframes silverShine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+.ctaBtn {
+    background: linear-gradient(90deg, #E0E0E0, #FFFFFF, #E0E0E0);
+    background-size: 200% auto;
+    animation: silverShine 3s linear infinite;
+    color: #000;
+    border: none;
+    padding: 20px 60px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.ctaBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+}
+
+.secureText {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 4rem;
+}
+
+.footer {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #555;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,93 @@
+.section {
+    padding: 100px 20px;
+    background-color: transparent;
+    /* Allow animated background to show */
+    color: #fff;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.headline {
+    font-family: 'SuisseIntl', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.accent {
+    color: #a46eff;
+    /* Purple accent */
+}
+
+.subheadline {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: #ccc;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0;
+    /* Remove padding to let image fill edge if desired, or keep it? User said "crop". Let's removing padding from the image side. */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: stretch;
+    /* Stretch to match height */
+    overflow: hidden;
+    /* Crop content */
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+}
+
+.textColumn {
+    flex: 1;
+    padding: 40px;
+    /* Internal padding for text */
+}
+
+.imageColumn {
+    flex: 0 0 300px;
+    /* Fixed width */
+    position: relative;
+}
+
+.phoneImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Fill the area */
+    display: block;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+}
+
+.text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #eee;
+    margin-bottom: 1.5rem;
+}
+
+.closing {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 1rem;
+}

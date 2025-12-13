@@ -1,0 +1,113 @@
+.section {
+    padding: 100px 20px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 60px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.headline {
+    font-family: 'SuisseIntl', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subheadline {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+.priceTag {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 15px;
+}
+
+.oldPrice {
+    text-decoration: line-through;
+    color: #666;
+    font-size: 1.5rem;
+}
+
+.newPrice {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.period {
+    color: #888;
+    font-size: 1rem;
+}
+
+.valueProps {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list {
+    list-style: none;
+    margin-bottom: 3rem;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto 3rem;
+}
+
+.list li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #eee;
+}
+
+@keyframes silverShine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+.ctaBtn {
+    background: linear-gradient(90deg, #E0E0E0, #FFFFFF, #E0E0E0);
+    background-size: 200% auto;
+    animation: silverShine 3s linear infinite;
+    color: #000;
+    border: none;
+    padding: 18px 48px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ctaBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}

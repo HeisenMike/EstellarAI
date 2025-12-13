@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('./assets/fonts/SuisseIntl-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('./assets/fonts/SuisseIntl-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+:root {
+  --font-primary: 'SuisseIntl', sans-serif;
+  --bg-color: #0A0A0A;
+  --text-color: #ffffff;
+  --accent-color: #1C0C30;
+  --primary-color: #ffffff; 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

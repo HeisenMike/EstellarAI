@@ -1,0 +1,144 @@
+.section {
+    padding: 100px 20px;
+    background-color: transparent;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.headline {
+    font-family: 'SuisseIntl', sans-serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subheadline {
+    font-size: 1.2rem;
+    color: #ccc;
+    font-weight: 300;
+}
+
+.bentoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(300px, auto);
+}
+
+@media (max-width: 900px) {
+    .bentoGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .bentoGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: rgba(20, 20, 20, 0.6);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Specific Span Classes */
+.col-span-2 {
+    grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+    .col-span-2 {
+        grid-column: span 1;
+    }
+}
+
+.iconBox {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.iconBox svg {
+    width: 36px;
+    height: 36px;
+    color: #e0e0e0;
+    filter: drop-shadow(0 0 12px rgba(164, 110, 255, 0.8));
+    stroke-width: 1.5;
+    transition: all 0.3s ease;
+}
+
+.card:hover .iconBox svg {
+    color: #fff;
+    filter: drop-shadow(0 0 16px rgba(164, 110, 255, 1));
+    transform: scale(1.1);
+}
+
+.stepNum {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.cardTitle {
+    font-family: 'SuisseIntl', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.desc {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: auto;
+    /* Push benefit to bottom */
+    line-height: 1.6;
+}
+
+.divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.benefit {
+    font-size: 0.95rem;
+    color: #ddd;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 3px solid #a46eff;
+}

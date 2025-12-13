@@ -1,0 +1,65 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    animation: float 20s infinite ease-in-out;
+}
+
+#orb1 {
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, #4A00E0 0%, transparent 70%);
+    top: -20%;
+    left: -20%;
+    animation-delay: 0s;
+}
+
+#orb2 {
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, #8E2DE2 0%, transparent 70%);
+    top: 40%;
+    right: -10%;
+    animation-delay: -5s;
+}
+
+#orb3 {
+    width: 40vw;
+    height: 40vw;
+    background: radial-gradient(circle, #001f3f 0%, transparent 70%);
+    bottom: -10%;
+    left: 20%;
+    animation-delay: -10s;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+/* Grid overlay removed */
