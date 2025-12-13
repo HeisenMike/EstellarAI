@@ -101,9 +101,10 @@ const PixelHead = () => {
                 if (entry.isIntersecting) {
                     isVisible = true;
                 } else {
-                    isVisible = false;
-                    // Optional: Reset particles if you want it to reform every time
-                    // initParticles();
+                    // Only reset on desktop
+                    if (window.innerWidth >= 768) {
+                        isVisible = false;
+                    }
                 }
             });
         }, { threshold: 0.1 });
