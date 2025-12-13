@@ -10,19 +10,16 @@ const About = () => {
                     <div className={styles.imagePlaceholder}>About Image</div>
                 </div>
                 <div className={styles.textCol}>
-                    <h2 className={styles.headline}>Hi, I'm Anna.</h2>
-                    <h3 className={styles.subheadline}>I help service businesses scale with AI.</h3>
+                    <h2 className={styles.headline}>Hi, I'm Michael.</h2>
+                    <h3 className={styles.subheadline}>I help service businesses scale with AI and automation.</h3>
                     <p className={styles.text}>
-                        Over the last 5 years, I've helped hundreds of service-based businesses increase bookings,
-                        streamline operations, and improve client experiences.
+                        For over a decade, I managed high-stakes B2B operations where client satisfaction wasn't optional. It was everything.
                     </p>
                     <p className={styles.text}>
-                        My epiphany came when I realized that most business owners are trapped by their phone—unable to grow
-                        because they are too busy handling the daily influx of calls.
+                        The challenge? Manual processes were sabotaging our ability to deliver. Missed follow-ups. Delayed responses. Opportunities lost not because we didn't care, but because we were buried in admin work.
                     </p>
                     <p className={styles.text}>
-                        That's why I developed this Voice AI solution: to give you your freedom back while your business grows on autopilot.
-                        My method consistently produces growth, efficiency, and happy clients.
+                        So I started automating the redundant tasks. Built workflows that handled the repetitive work so my team could focus on what actually mattered: serving clients and closing deals.
                     </p>
                 </div>
             </div>
