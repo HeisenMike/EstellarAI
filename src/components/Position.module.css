@@ -38,6 +38,12 @@
     grid-auto-rows: minmax(300px, auto);
 }
 
+.lightItalic {
+    font-family: "Instrument Serif", serif !important;
+    font-weight: 400 !important;
+    font-style: italic !important;
+}
+
 @media (max-width: 900px) {
     .bentoGrid {
         grid-template-columns: repeat(2, 1fr);

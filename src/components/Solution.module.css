@@ -50,9 +50,9 @@
 }
 
 .lightItalic {
-    font-family: "Instrument Serif", "Inter Placeholder", sans-serif;
-    font-weight: 400;
-    font-style: italic;
+    font-family: "Instrument Serif", serif !important;
+    font-weight: 400 !important;
+    font-style: italic !important;
 }
 
 @media (max-width: 768px) {
