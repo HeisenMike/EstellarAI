@@ -166,7 +166,7 @@
 
 .btnBg {
     position: absolute;
-    inset: 2;
+    inset: 0px;
     background: #FFFFFF;
     border-radius: 50px;
     z-index: -1;
