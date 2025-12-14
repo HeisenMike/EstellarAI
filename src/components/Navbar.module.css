@@ -12,6 +12,7 @@
     /* Space on left */
     padding-right: 60px;
     /* Space on right */
+    margin: 10;
     background: transparent;
     z-index: 1000;
     display: flex;
