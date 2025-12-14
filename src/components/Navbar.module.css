@@ -1,13 +1,14 @@
 .navbar {
     position: fixed;
     top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 20px;
+    /* Aligned to left */
+    transform: none;
+    /* Removed centering */
     width: auto;
-    min-width: 400px;
+    /* min-width: 400px; Removed min-width to fit content */
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.05);
-    /* Lighter, more transparent */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     z-index: 1000;
@@ -23,12 +24,11 @@
     gap: 40px;
 }
 
-.logo {
-    font-family: 'SuisseIntl', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: #fff;
-    letter-spacing: -0.02em;
+.logoImage {
+    height: 30px;
+    /* Adjust based on logo aspect ratio */
+    width: auto;
+    display: block;
 }
 
 .dot {
