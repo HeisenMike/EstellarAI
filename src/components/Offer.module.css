@@ -104,9 +104,25 @@
     }
 }
 
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
 .ctaBtn {
     position: relative;
-    background: transparent;
+    background: #FFFFFF;
     color: #000;
     border: none;
     padding: 18px 48px;
@@ -116,33 +132,28 @@
     cursor: pointer;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
-    overflow: hidden;
     z-index: 1;
 }
 
+.ctaBtn::after,
 .ctaBtn::before {
-    content: "";
+    content: '';
     position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 0%, #FFFFFF 50%, transparent 100%);
     top: 50%;
     left: 50%;
-    width: 300%;
-    height: 300%;
-    background: conic-gradient(from 0deg,
-            transparent,
-            #FFFFFF,
-            transparent 100deg);
-    transform: translate(-50%, -50%);
-    animation: rotate 3s linear infinite;
-    z-index: -2;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 50px;
+    animation: 3s spin linear infinite;
 }
 
-.ctaBtn::after {
-    content: "";
-    position: absolute;
-    inset: 2px;
-    background: #FFFFFF;
-    border-radius: 48px;
-    z-index: -1;
+.ctaBtn::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
 }
 
 .ctaBtn:hover {
