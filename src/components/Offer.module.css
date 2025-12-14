@@ -141,7 +141,7 @@
     position: absolute;
     inset: -3px;
     background: conic-gradient(from var(--angle),
-            transparent 80%,
+            transparent 50%,
             #a855f7 100%);
     border-radius: 50px;
     animation: spin 3s linear infinite;
