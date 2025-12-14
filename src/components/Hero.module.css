@@ -125,36 +125,60 @@
     font-weight: 600;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    overflow: hidden;
+    overflow: visible;
+    /* Important for glow to show */
     z-index: 1;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* Glowing blurred layer */
 .primaryBtn::before {
     content: '';
     position: absolute;
-    inset: -4px;
+    inset: -5px;
     background: conic-gradient(from var(--angle),
-            transparent 30%,
-            #C0C0C0 100%);
+            transparent 40%,
+            #a855f7,
+            #d8b4fe,
+            #a855f7);
     border-radius: 50px;
-    animation: spin 5s linear infinite;
-    z-index: -2;
+    animation: spin 3s linear infinite;
+    filter: blur(15px);
+    /* Creates the glow */
+    opacity: 0.8;
+    z-index: -3;
 }
 
+/* Sharp border layer */
 .primaryBtn::after {
     content: '';
     position: absolute;
-    inset: 3px;
+    inset: -3px;
+    background: conic-gradient(from var(--angle),
+            transparent 40%,
+            #a855f7,
+            #d8b4fe,
+            #a855f7);
+    border-radius: 50px;
+    animation: spin 3s linear infinite;
+    z-index: -2;
+}
+
+.btnBg {
+    position: absolute;
+    inset: 0;
     background: #FFFFFF;
-    border-radius: 48px;
+    border-radius: 50px;
     z-index: -1;
+}
+
+.btnText {
+    position: relative;
+    z-index: 1;
 }
 
 .primaryBtn:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
 }
 
 .secondaryBtn {

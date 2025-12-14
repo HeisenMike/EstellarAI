@@ -34,7 +34,8 @@ const Hero = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            Get Started Free
+                            <span className={styles.btnBg}></span>
+                            <span className={styles.btnText}>Get Started Free</span>
                         </motion.button>
                         <motion.button
                             className={styles.secondaryBtn}
