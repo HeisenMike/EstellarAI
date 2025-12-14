@@ -28,6 +28,12 @@
     /* Purple accent */
 }
 
+.lightItalic {
+    font-family: "Instrument Serif", "Inter Placeholder", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
 .subheadline {
     font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     color: #ccc;

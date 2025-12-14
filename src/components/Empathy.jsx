@@ -13,7 +13,7 @@ const Empathy = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className={styles.headline}>Every Missed Call Is Money Walking Out the Door to Your Competition.</h2>
+                    <h2 className={styles.headline}>Every <span className={styles.lightItalic}>Missed Call</span> Is Money Walking Out the Door to Your Competition.</h2>
                     <h3 className={styles.subheadline}>You know you're losing revenue, but you can't clone yourself. The good news? You don't have to.</h3>
 
                     <div className={styles.content}>
