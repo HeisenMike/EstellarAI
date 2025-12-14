@@ -15,8 +15,8 @@ const Offer = () => {
                 <h3 className={styles.subheadline}>Launch your 24/7 autonomous office with our Founding Member pricing.</h3>
 
                 <div className={styles.priceTag}>
-                    <span className={styles.oldPrice}>$2,500 Integration Fee</span>
-                    <span className={styles.newPrice}>Waived</span>
+                    <span className={styles.oldPrice}>$2,500 Setup Fee</span>
+                    <span className={styles.newPrice}>Launch Price: $97 Setup</span>
                     <span className={styles.period}>for Founding Members</span>
                 </div>
 
@@ -28,7 +28,7 @@ const Offer = () => {
                 </p>
 
                 <ul className={styles.list}>
-                    <li>✓ 24/7 Lead Capture</li>
+                    <li>✓ 24/7 Lead Capture Voice AI</li>
                     <li>✓ Smart Booking & Calendar Sync</li>
                     <li>✓ Automated Payment Processing</li>
                     <li>✓ Automated Reputation Management</li>
