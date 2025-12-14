@@ -52,6 +52,12 @@
     font-size: 3rem;
     font-weight: 700;
     color: #fff;
+    background: linear-gradient(90deg, #FFFFFF 0%, #A0A0A0 25%, #FFFFFF 50%, #A0A0A0 75%, #FFFFFF 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: silverShine 3s linear infinite;
 }
 
 .period {

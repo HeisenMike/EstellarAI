@@ -21,7 +21,7 @@ const Offer = () => {
                 </div>
 
                 <p className={styles.valueProps}>
-                    This isn't just appointment setting—it's a complete office solution covering lead capture, booking, follow-up, payment processing, and review generation (the entire 6-Step Blueprint).
+                    This isn't just appointment setting—it's a complete office solution covering lead capture, booking, follow-up, payment processing, and review generation (the entire 5-Step Blueprint).
                 </p>
                 <p className={styles.valueProps}>
                     By joining us as a Founding Member, you lock in low monthly pricing and gain immediate relief from staff stress and missed revenue. This setup usually requires a $2,500 enterprise integration fee, but we've reduced the barrier to entry to help you grow.
