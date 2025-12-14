@@ -134,7 +134,7 @@
 .primaryBtn::before {
     content: '';
     position: absolute;
-    inset: -3px;
+    inset: -5px;
     background: conic-gradient(from var(--angle),
             transparent 50%,
             #a855f7 100%);
