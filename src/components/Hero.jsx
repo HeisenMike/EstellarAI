@@ -20,7 +20,7 @@ const Hero = () => {
                     </div>
 
                     <h1 className={styles.title}>
-                        The <span className={styles.lightItalic}>All-in-One</span> AI System Ready to Book Your Jobs in 14 Days.
+                        The <span className={styles.lightItalic}>All-in-One</span> AI System Ready to Book Your Jobs in 14 Days
                     </h1>
 
                     <p className={styles.painRelief}>
