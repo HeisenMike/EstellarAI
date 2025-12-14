@@ -19,7 +19,13 @@ const About = () => {
                         The challenge? Manual processes were sabotaging our ability to deliver. Missed follow-ups. Delayed responses. Opportunities lost not because we didn't care, but because we were buried in admin work.
                     </p>
                     <p className={styles.text}>
-                        So I started automating the redundant tasks. Built workflows that handled the repetitive work so my team could focus on what actually mattered: serving clients and closing deals.
+                        So I started automating the redundant tasks. That's when it clicked: automation wasn't just a productivity tool. It was the key to scaling without sacrificing service quality.
+                    </p>
+                    <p className={styles.text}>
+                        Now I help home service contractors capture more revenue with Voice AI and marketing automation. AI agents answer every call and book appointments instantly. Automated follow-up systems turn leads into customers. All running 24/7 without adding to your workload.
+                    </p>
+                    <p className={styles.text}>
+                        Google Analytics certified. HubSpot certified. But more importantly, I treat your business like a partnership, not a transaction.
                     </p>
                 </div>
             </div>
