@@ -53,7 +53,7 @@ const Position = () => {
         <section className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h2 className={styles.headline}>The 5-Step Blueprint That <br /> Automates Your Entire Business Cycle</h2>
+                    <h2 className={styles.headline}>The <span className={styles.lightItalic}>5-Step Blueprint</span> That <br /> Automates Your Entire Business Cycle</h2>
                     <h3 className={styles.subheadline}>From the very first ring to the final 5-star review, Estellar AI handles it all.</h3>
                 </div>
 
