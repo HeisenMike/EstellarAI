@@ -122,7 +122,7 @@
 
 .ctaBtn {
     position: relative;
-    background: #FFFFFF;
+    background: transparent;
     color: #000;
     border: none;
     padding: 18px 48px;
@@ -138,6 +138,7 @@
 .ctaBtn::after,
 .ctaBtn::before {
     content: '';
+    box-sizing: content-box;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -145,7 +146,7 @@
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    z-index: -1;
+    z-index: -2;
     padding: 3px;
     border-radius: 50px;
     animation: 3s spin linear infinite;
@@ -154,6 +155,17 @@
 .ctaBtn::before {
     filter: blur(1.5rem);
     opacity: 0.5;
+}
+
+.ctaBtn::after {
+    /* Use ::after for the white background so it sits between text and border */
+    background: #FFFFFF;
+    z-index: -1;
+    padding: 0;
+    /* Keep it exactly fitting the button */
+    /* Remove gradient from here as it's the white 'cover' */
+    background-image: none;
+    animation: none;
 }
 
 .ctaBtn:hover {
