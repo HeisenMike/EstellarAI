@@ -107,7 +107,7 @@
 .ctaBtn {
     position: relative;
     background: transparent;
-    color: #fff;
+    color: #000;
     border: none;
     padding: 18px 48px;
     font-size: 1.2rem;
@@ -140,7 +140,7 @@
     content: "";
     position: absolute;
     inset: 2px;
-    background: linear-gradient(135deg, #1C0C30 0%, #0A0A0A 100%);
+    background: #FFFFFF;
     border-radius: 48px;
     z-index: -1;
 }
