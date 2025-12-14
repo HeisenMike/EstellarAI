@@ -135,7 +135,7 @@
 .primaryBtn::before {
     content: '';
     position: absolute;
-    inset: -5px;
+    inset: -4px;
     background: conic-gradient(from var(--angle),
             transparent 40%,
             #a855f7,
@@ -153,7 +153,7 @@
 .primaryBtn::after {
     content: '';
     position: absolute;
-    inset: -3px;
+    inset: -2px;
     background: conic-gradient(from var(--angle),
             transparent 40%,
             #a855f7,
@@ -166,7 +166,7 @@
 
 .btnBg {
     position: absolute;
-    inset: 0px;
+    inset: 1px;
     background: #FFFFFF;
     border-radius: 50px;
     z-index: -1;
