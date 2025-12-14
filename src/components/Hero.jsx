@@ -15,8 +15,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <div className={styles.badgeContainer}>
-                        <span className={styles.badge}>New v2.0 Available</span>
-                        <span className={styles.badge}>AI Powered</span>
+                        <span className={styles.badge}>Just Launched</span>
                     </div>
 
                     <h1 className={styles.title}>
