@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Navbar.module.css';
-import logo from '../assets/estellar_logo_v4.png';
+import logo from '../assets/estellar_logo_v5.png';
 
 const Navbar = () => {
   return (
