@@ -4,13 +4,13 @@
     left: 0;
     right: 0;
     width: 100%;
-    padding-top: 0px;
+    padding-top: 15px;
     /* Space above */
-    padding-bottom: 2000px;
+    padding-bottom: 40px;
     /* Space below */
     padding-left: 60px;
     /* Space on left */
-    padding-right: 90px;
+    padding-right: 60px;
     /* Space on right */
     background: transparent;
     z-index: 1000;
