@@ -5,13 +5,8 @@
     right: 0;
     width: 100%;
     padding: 15px 40px;
-    background: rgba(10, 10, 10, 0.8);
-    /* Darker semi-transparent background */
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: transparent;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
 }
@@ -27,7 +22,7 @@
 }
 
 .logoImage {
-    height: 80px;
+    height: 120px;
     /* Much bigger logo */
     width: auto;
     display: block;
