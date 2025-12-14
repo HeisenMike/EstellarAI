@@ -14,9 +14,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <div className={styles.badgeContainer}>
-                        <span className={styles.badge}>Just Launched</span>
-                    </div>
+
 
                     <h1 className={styles.title}>
                         The <span className={styles.lightItalic}>All-in-One</span> AI System Ready to Book Your Jobs in 14 Days
