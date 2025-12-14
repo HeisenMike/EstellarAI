@@ -14,7 +14,8 @@ const Solution = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <div className={styles.textContent}>
-                        <h2 className={styles.headline}>The Always-On Receptionist <br /> Who Never Sleeps.</h2>
+                        <h2 className={styles.headline}>The <span className={styles.lightItalic}>Always-On Receptionist</span>
+                            Who Never Sleeps.</h2>
                         <h3 className={styles.subheadline}>A fully autonomous AI that handles your front desk 24/7.</h3>
                         <p className={styles.paragraph}>
                             The missing ingredient is reliability. You need a system that captures every lead, day or night.

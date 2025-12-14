@@ -19,7 +19,7 @@
 
 .headline {
     font-family: 'SuisseIntl', sans-serif;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
@@ -144,7 +144,7 @@
             transparent 50%,
             #a855f7 100%);
     border-radius: 50px;
-    animation: spin 3s linear infinite;
+    animation: spin 5s linear infinite;
     z-index: -2;
 }
 

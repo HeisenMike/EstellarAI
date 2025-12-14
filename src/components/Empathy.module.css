@@ -35,10 +35,10 @@
 }
 
 .subheadline {
-    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-    color: #ccc;
+    font-size: 1.2rem;
+    color: #aaa;
     margin-bottom: 3rem;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .content {
