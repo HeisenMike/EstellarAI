@@ -50,7 +50,7 @@
 
 .newPrice {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 400;
     color: #fff;
     background: linear-gradient(90deg, #FFFFFF 0%, #A0A0A0 25%, #FFFFFF 50%, #A0A0A0 75%, #FFFFFF 100%);
     background-size: 200% auto;

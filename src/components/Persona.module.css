@@ -26,7 +26,8 @@
 
 .subheadline {
     font-size: 1.2rem;
-    color: #ccc;
+    color: #aaa;
+    font-weight: 300;
 }
 
 .grid {
