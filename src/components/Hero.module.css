@@ -134,10 +134,10 @@
 .primaryBtn::before {
     content: '';
     position: absolute;
-    inset: -8px;
+    inset: -4px;
     background: conic-gradient(from var(--angle),
             transparent 30%,
-            #a855f7 100%);
+            #C0C0C0 100%);
     border-radius: 50px;
     animation: spin 5s linear infinite;
     z-index: -2;
