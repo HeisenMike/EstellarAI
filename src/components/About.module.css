@@ -52,7 +52,7 @@
 .headline {
     font-family: 'SuisseIntl', sans-serif;
     font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 1rem;
     background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
     background-clip: text;
@@ -62,8 +62,9 @@
 
 .subheadline {
     font-size: 1.2rem;
-    color: #888;
+    color: #aaa;
     margin-bottom: 2rem;
+    font-weight: 300;
 }
 
 .text {
