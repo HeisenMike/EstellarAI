@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './About.module.css';
+import aboutImage from '../assets/michael_about.jpg';
 
 const About = () => {
     return (
         <section className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.imageCol}>
-                    {/* Placeholder for About Image */}
-                    <div className={styles.imagePlaceholder}>About Image</div>
+                    <img src={aboutImage} alt="Michael Estrella" className={styles.aboutImage} />
                 </div>
                 <div className={styles.textCol}>
                     <h2 className={styles.headline}>Hi, I'm Michael.</h2>
