@@ -132,43 +132,35 @@
     cursor: pointer;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
     z-index: 1;
 }
 
-.ctaBtn::after,
 .ctaBtn::before {
     content: '';
-    box-sizing: content-box;
     position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: conic-gradient(from var(--angle), #6b21a8, #a855f7, #d8b4fe, #a855f7, #6b21a8);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -2;
-    padding: 3px;
+    inset: -3px;
+    background: conic-gradient(from var(--angle),
+            #6b21a8,
+            #a855f7,
+            #d8b4fe,
+            #a855f7,
+            #6b21a8);
     border-radius: 50px;
-    animation: 3s spin linear infinite;
-}
-
-.ctaBtn::before {
-    filter: blur(1.5rem);
-    opacity: 0.5;
+    animation: spin 3s linear infinite;
+    z-index: -2;
 }
 
 .ctaBtn::after {
-    /* Use ::after for the white background so it sits between text and border */
+    content: '';
+    position: absolute;
+    inset: 2px;
     background: #FFFFFF;
+    border-radius: 48px;
     z-index: -1;
-    padding: 0;
-    /* Keep it exactly fitting the button */
-    /* Remove gradient from here as it's the white 'cover' */
-    background-image: none;
-    animation: none;
 }
 
 .ctaBtn:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
 }
