@@ -134,9 +134,9 @@
 .primaryBtn::before {
     content: '';
     position: absolute;
-    inset: -15px;
+    inset: -8px;
     background: conic-gradient(from var(--angle),
-            transparent 50%,
+            transparent 30%,
             #a855f7 100%);
     border-radius: 50px;
     animation: spin 5s linear infinite;
@@ -146,7 +146,7 @@
 .primaryBtn::after {
     content: '';
     position: absolute;
-    inset: 4px;
+    inset: 3px;
     background: #FFFFFF;
     border-radius: 48px;
     z-index: -1;
