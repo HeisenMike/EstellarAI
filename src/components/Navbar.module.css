@@ -4,7 +4,14 @@
     left: 0;
     right: 0;
     width: 100%;
-    padding: 50px 10px;
+    padding-top: 5px;
+    /* Space above */
+    padding-bottom: 15px;
+    /* Space below */
+    padding-left: 40px;
+    /* Space on left */
+    padding-right: 40px;
+    /* Space on right */
     background: transparent;
     z-index: 1000;
     display: flex;
