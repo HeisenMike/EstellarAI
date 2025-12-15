@@ -17,11 +17,26 @@
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
+.eyebrow {
+    display: inline-block;
+    background: rgba(168, 85, 247, 0.1);
+    color: #d8b4fe;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
 .headline {
     font-family: 'SuisseIntl', sans-serif;
-    font-weight: 300;
-    font-size: 2.5rem;
+    font-weight: 600;
+    font-size: 2.8rem;
     margin-bottom: 1rem;
+    line-height: 1.2;
     background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -33,46 +48,79 @@
     color: #aaa;
     margin-bottom: 2rem;
     font-weight: 300;
-}
-
-.priceTag {
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 15px;
-}
-
-.oldPrice {
-    text-decoration: line-through;
-    color: #666;
-    font-size: 1.5rem;
-}
-
-.newPrice {
-    font-size: 3rem;
-    font-weight: 400;
-    color: #fff;
-    background: linear-gradient(90deg, #FFFFFF 0%, #A0A0A0 25%, #FFFFFF 50%, #A0A0A0 75%, #FFFFFF 100%);
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: silverShine 3s linear infinite;
-}
-
-.period {
-    color: #888;
-    font-size: 1rem;
-}
-
-.valueProps {
-    font-size: 1.1rem;
-    color: #ccc;
-    margin-bottom: 2rem;
-    max-width: 600px;
+    line-height: 1.6;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.bodyCopy {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricingBox {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 2rem auto 3rem;
+    max-width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricingBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.trialText {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.thenPrice {
+    color: #eee;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.regularPrice {
+    color: #666;
+    font-size: 0.95rem;
+    text-decoration: line-through;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.lockText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: #4ade80;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: rgba(74, 222, 128, 0.1);
+    padding: 6px 12px;
+    border-radius: 6px;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .list {
@@ -84,9 +132,12 @@
 }
 
 .list li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-size: 1.1rem;
     color: #eee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 @keyframes silverShine {
@@ -126,15 +177,17 @@
     background: transparent;
     color: #000;
     border: none;
-    padding: 18px 48px;
+    padding: 20px 48px;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
     border-radius: 50px;
     cursor: pointer;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     overflow: hidden;
     z-index: 1;
+    width: 100%;
+    max-width: 400px;
 }
 
 .ctaBtn::before {
@@ -161,4 +214,10 @@
 .ctaBtn:hover {
     transform: scale(1.05);
     box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+}
+
+.ctaSubtext {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
 }

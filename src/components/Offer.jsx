@@ -11,20 +11,12 @@ const Offer = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
             >
-                <h2 className={styles.headline}>Estellar AI Full Business Automation Package</h2>
-                <h3 className={styles.subheadline}>Launch your 24/7 autonomous office with our Founding Member pricing.</h3>
+                <div className={styles.eyebrow}>Founding Member Offer</div>
+                <h2 className={styles.headline}>Everything You Need to Never Miss Another Job</h2>
+                <h3 className={styles.subheadline}>This isn't just appointment setting. It's your complete AI office that handles every call, booking, payment, and review automatically.</h3>
 
-                <div className={styles.priceTag}>
-                    <span className={styles.oldPrice}>$2,500 Setup Fee</span>
-                    <span className={styles.newPrice}>Launch Price: $97 Setup</span>
-                    <span className={styles.period}>for Founding Members</span>
-                </div>
-
-                <p className={styles.valueProps}>
-                    This isn't just appointment setting—it's a complete office solution covering lead capture, booking, follow-up, payment processing, and review generation (the entire 5-Step Blueprint).
-                </p>
-                <p className={styles.valueProps}>
-                    By joining us as a Founding Member, you lock in low monthly pricing and gain immediate relief from staff stress and missed revenue. This setup usually requires a $2,500 enterprise integration fee, but we've reduced the barrier to entry to help you grow.
+                <p className={styles.bodyCopy}>
+                    As a Founding Member, you get priority setup and lock in $497/month forever (regular price: $697/month). Plus, your setup fee is just $97 instead of the standard $2,500 enterprise integration.
                 </p>
 
                 <ul className={styles.list}>
@@ -37,7 +29,17 @@ const Offer = () => {
                     <li>✓ Founding Member Priority Support</li>
                 </ul>
 
-                <button className={styles.ctaBtn}>Inquire About Founding Member Spots</button>
+                <div className={styles.pricingBox}>
+                    <span className={styles.trialText}>14-Day Free Trial</span>
+                    <span className={styles.thenPrice}>Then: $97 setup + $497/month</span>
+                    <span className={styles.regularPrice}>(Regular: $2,500 setup + $697/month)</span>
+                    <div className={styles.lockText}>
+                        🔒 Price locked in forever as Founding Member
+                    </div>
+                </div>
+
+                <button className={styles.ctaBtn}>Book Your Free Strategy Call</button>
+                <p className={styles.ctaSubtext}>No credit card required • Only 5 spots left this month</p>
             </motion.div>
         </section>
     );
