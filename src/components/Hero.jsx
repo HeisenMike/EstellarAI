@@ -20,7 +20,7 @@ const Hero = () => {
                     </h1>
 
                     <p className={styles.painRelief}>
-                        Complete AI automation for home service contractors. Handles call answering, appointment booking, payment processing, invoicing, and reputation management 24/7 so you never lose revenue.
+                        Complete automation for HVAC, plumbing, and roofing contractors with payment processing, invoicing, and reputation management. Focus on the work while we handle everything else.
                     </p>
 
                     <div className={styles.btnGroup}>
