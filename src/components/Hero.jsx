@@ -16,7 +16,7 @@ const Hero = () => {
                 >
 
                     <h1 className={styles.title}>
-                        The <span className={styles.lightItalic}>24/7 AI System </span> That Answers Every Call and Books Every Job
+                        The 24/7 <span className={styles.lightItalic}> AI System </span> That Answers Every Call and Books Every Job
                     </h1>
 
                     <p className={styles.painRelief}>
