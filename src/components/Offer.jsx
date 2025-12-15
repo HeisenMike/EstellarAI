@@ -38,7 +38,10 @@ const Offer = () => {
                     </div>
                 </div>
 
-                <button className={styles.ctaBtn}>Book Your Free Strategy Call</button>
+                <button className={styles.ctaBtn}>
+                    <span className={styles.btnBg}></span>
+                    <span className={styles.btnText}>Book Your Free Strategy Call</span>
+                </button>
                 <p className={styles.ctaSubtext}>No credit card required • Only 5 spots left this month</p>
             </motion.div>
         </section>
