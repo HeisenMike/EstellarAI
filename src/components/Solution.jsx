@@ -19,7 +19,7 @@ const Solution = () => {
                         <h3 className={styles.subheadline}>A fully autonomous AI that handles your front desk 24/7.</h3>
                         <p className={styles.paragraph}>
                             The missing ingredient is reliability. You need a system that captures every lead, day or night.
-                            My Voice AI is not just a voicemail—it's an intelligent agent that answers questions, checks your calendar,
+                            Estellar AI is not just a voicemail—it's an intelligent agent that answers questions, checks your calendar,
                             and books appointments in real-time.
                         </p>
                         <p className={styles.paragraph}>
