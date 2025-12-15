@@ -30,7 +30,7 @@ const Hero = () => {
                             whileTap={{ scale: 0.95 }}
                         >
                             <span className={styles.btnBg}></span>
-                            <span className={styles.btnText}>Get Started Free</span>
+                            <span className={styles.btnText}>Book a Free Strategy Call</span>
                         </motion.button>
                         <motion.button
                             className={styles.secondaryBtn}
