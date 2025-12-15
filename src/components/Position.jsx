@@ -8,7 +8,7 @@ const blueprintSteps = [
         icon: <LuPhone />,
         step: "1. 24/7 Voice AI Agent",
         title: "Capture Every Call Instantly",
-        desc: "Answers every call instantly, day or night, with natural conversation that sounds completely human. Handles multiple calls simultaneously and qualifies leads.",
+        desc: "Your AI voice agent answers every call right away, day or night, with natural, human-sounding conversation. It can book, reschedule, and cancel appointments automatically while answering customer inquiries clearly and consistently. The system handles multiple calls at the same time, so every caller is attended to promptly. It collects key details, qualifies leads, and keeps your business responsive even when you are unavailable. This ensures more appointments are booked, more questions are answered, and every opportunity is captured efficiently.",
         benefit: "Capture every emergency job and high-value lead, even at 2 AM.",
         span: "col-span-2"
     },
