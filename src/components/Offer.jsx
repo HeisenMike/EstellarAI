@@ -31,7 +31,7 @@ const Offer = () => {
 
                 <div className={styles.pricingBox}>
                     <span className={styles.trialText}>14-Day Free Trial. No setup fees.</span>
-                    <span className={styles.thenPrice}>Then: $97/month only.</span>
+                    <span className={styles.thenPrice}>Then: $97/month + phone usage.</span>
                     <span className={styles.regularPrice}>(Regular: $2,500 setup + $697/month)</span>
                     <div className={styles.lockText}>
                         🔒 Price locked in forever as Founding Member
