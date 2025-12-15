@@ -12,7 +12,7 @@ const Offer = () => {
                 viewport={{ once: true }}
             >
                 <div className={styles.eyebrow}>Founding Member Offer</div>
-                <h2 className={styles.headline}>Everything You Need to Never Miss Another Job</h2>
+                <h2 className={styles.headline}> <span className={styles.lightItalic}>Everything</span> You Need to Never Miss Another Job</h2>
                 <h3 className={styles.subheadline}>This isn't just appointment setting. It's your complete AI office that handles every call, booking, payment, and review automatically.</h3>
 
                 <p className={styles.bodyCopy}>
