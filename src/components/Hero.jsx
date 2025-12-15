@@ -15,9 +15,8 @@ const Hero = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
 
-
                     <h1 className={styles.title}>
-                        The <span className={styles.lightItalic}>All-in-One</span> AI System Ready to Book Your Jobs in 14 Days
+                        The <span className={styles.lightItalic}>24/7 AI System </span> That Answers Every Call and Books Every Job
                     </h1>
 
                     <p className={styles.painRelief}>
