@@ -20,8 +20,7 @@ const Hero = () => {
                     </h1>
 
                     <p className={styles.painRelief}>
-                        Deploy the complete 24/7 Voice AI lead management, booking,
-                        and payment system for your home service business fast.
+                        Complete AI automation for home service contractors: call answering, appointment booking, payment processing, invoicing, and reputation management—all handled 24/7 so you never lose revenue.
                     </p>
 
                     <div className={styles.btnGroup}>
