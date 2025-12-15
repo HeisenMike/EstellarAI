@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './GuaranteeFAQ.module.css';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 
 const faqs = [
     {
@@ -51,27 +51,36 @@ const GuaranteeFAQ = () => {
                     <h3 className={styles.subheadline}>Answers to your most common concerns.</h3>
 
                     <div className={styles.faqList}>
-                        {faqs.map((item, index) => (
-                            <div key={index} className={styles.faqItem} onClick={() => toggleFAQ(index)}>
-                                <div className={styles.question}>
-                                    {item.q}
-                                    <span className={styles.icon}>{activeIndex === index ? '-' : '+'}</span>
-                                </div>
-                                <AnimatePresence>
-                                    {activeIndex === index && (
-                                        <motion.div
-                                            className={styles.answer}
-                                            initial={{ height: 0, opacity: 0 }}
-                                            animate={{ height: "auto", opacity: 1 }}
-                                            exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.3, ease: "easeInOut" }}
-                                        >
-                                            {item.a}
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </div>
-                        ))}
+                        <LayoutGroup>
+                            {faqs.map((item, index) => (
+                                <motion.div
+                                    layout
+                                    key={index}
+                                    className={styles.faqItem}
+                                    onClick={() => toggleFAQ(index)}
+                                    initial={false}
+                                >
+                                    <motion.div layout className={styles.question}>
+                                        {item.q}
+                                        <span className={styles.icon}>{activeIndex === index ? '-' : '+'}</span>
+                                    </motion.div>
+                                    <AnimatePresence initial={false} mode="wait">
+                                        {activeIndex === index && (
+                                            <motion.div
+                                                layout
+                                                className={styles.answer}
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: "auto", opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                                            >
+                                                {item.a}
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </motion.div>
+                            ))}
+                        </LayoutGroup>
                     </div>
                 </div>
 
