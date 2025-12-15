@@ -17,7 +17,7 @@ const PixelSwarm = () => {
 
         const initParticles = () => {
             particles = [];
-            const particleCount = window.innerWidth < 768 ? 800 : 2500; // Much denser
+            const particleCount = window.innerWidth < 768 ? 400 : 1200; // Reduced density
 
             for (let i = 0; i < particleCount; i++) {
                 particles.push({
@@ -25,7 +25,7 @@ const PixelSwarm = () => {
                     y: Math.random() * canvas.height,
                     // Base position relative to the wave center
                     offsetY: (Math.random() - 0.5) * 300, // Spread of the wave (concentrated but thick)
-                    vx: Math.random() * 0.5 + 0.2,
+                    vx: Math.random() * 0.1 + 0.05, // Slower velocity
                     size: Math.random() * 2 + 1.5,
                     // Phase for the wave movement
                     wavePhase: Math.random() * Math.PI * 2,
@@ -41,7 +41,7 @@ const PixelSwarm = () => {
 
             const amplitude = 120;
             const wavelength = 0.002;
-            const speed = 0.0015;
+            const speed = 0.0005; // Critical: Slower wave animation
             const centerY = canvas.height / 2 + 50;
 
             particles.forEach(p => {
@@ -71,7 +71,7 @@ const PixelSwarm = () => {
 
                 // Dynamic opacity based on "depth" (simulated by twist envelope)
                 const depth = Math.sin(x * 0.5 + t * 0.5 + p.wavePhase);
-                const opacity = Math.max(0.1, (depth + 1) / 2 * 0.8); // 0.1 to 0.9
+                const opacity = Math.max(0.05, (depth + 1) / 2 * 0.3); // Fainter opacity (max ~0.35)
 
                 ctx.globalAlpha = opacity;
                 ctx.fillRect(p.x, p.y, p.size, p.size);

@@ -36,6 +36,12 @@
     -webkit-text-fill-color: transparent;
 }
 
+.lightItalic {
+    font-family: "Instrument Serif", "Inter Placeholder", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
 .subheadline {
     font-size: 1.3rem;
     color: #ccc;
