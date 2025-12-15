@@ -13,7 +13,7 @@ const Navbar = () => {
     >
       <div className={styles.container}>
         <img src={logo} alt="Estellar AI" className={styles.logoImage} />
-        <button className={styles.ctaButton}>Get Started</button>
+        <button className={styles.ctaButton}>Book A Call</button>
       </div>
     </motion.nav>
   );
