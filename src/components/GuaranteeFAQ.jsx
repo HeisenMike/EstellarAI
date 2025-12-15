@@ -5,11 +5,11 @@ import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 const faqs = [
     {
         q: "I\u2019m not tech savvy\u2014how do I handle setup?",
-        a: "We handle the entire setup for you. Our team configures the AI, connects your calendar, and sets up the phone numbers. You just tell us how you want to be booked."
+        a: "I handle the entire setup for you. I configure the AI, connect your calendar, and set up the phone numbers. You just tell me how you want to be booked."
     },
     {
         q: "Does it work with my current software?",
-        a: "Yes, Estellar integrates with major platforms like Housecall Pro, ServiceTitan, and Google Calendar, ensuring seamless booking."
+        a: "Yes, Estellar AI integrates with major platforms like Housecall Pro, ServiceTitan, and Google Calendar, ensuring seamless booking."
     },
     {
         q: "What if a customer has a complex emergency?",
@@ -17,11 +17,11 @@ const faqs = [
     },
     {
         q: "Can I customize what the AI says?",
-        a: "Absolutely. We customize the script to match your company's tone, pricing policies, and service area."
+        a: "Absolutely. I customize the script to match your company's tone, pricing policies, and service area."
     },
     {
         q: "Is there a contract?",
-        a: "No. We operate on a month-to-month basis. We believe we should earn your business every month."
+        a: "No. I operate on a month-to-month basis. I believe I should earn your business every month."
     }
 ];
 
