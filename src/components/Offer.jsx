@@ -16,7 +16,7 @@ const Offer = () => {
                 <h3 className={styles.subheadline}>This isn't just appointment setting. It's your complete AI office that handles every call, booking, payment, and review automatically.</h3>
 
                 <p className={styles.bodyCopy}>
-                    As a Founding Member, you get priority setup and lock in $497/month forever (regular price: $697/month). Plus, your setup fee is just $97 instead of the standard $2,500 enterprise integration.
+                    As a Founding Member, you get priority setup and lock in $97/month forever (regular price: $697/month). Plus, your setup fee is just $97 instead of the standard $2,500 enterprise integration.
                 </p>
 
                 <ul className={styles.list}>
@@ -30,8 +30,8 @@ const Offer = () => {
                 </ul>
 
                 <div className={styles.pricingBox}>
-                    <span className={styles.trialText}>14-Day Free Trial</span>
-                    <span className={styles.thenPrice}>Then: $97 setup + $497/month</span>
+                    <span className={styles.trialText}>14-Day Free Trial. Free Setup.</span>
+                    <span className={styles.thenPrice}>Then: $97/month only.</span>
                     <span className={styles.regularPrice}>(Regular: $2,500 setup + $697/month)</span>
                     <div className={styles.lockText}>
                         🔒 Price locked in forever as Founding Member
