@@ -12,7 +12,7 @@ const CTA = () => {
                 viewport={{ once: true }}
             >
                 <div className={styles.eyebrow}>Founding Member Offer - Limited Spots</div>
-                <h2 className={styles.headline}>Lock In Your Founding Member Pricing Today</h2>
+                <h2 className={styles.headline}> <span className={styles.lightItalic}>Lock In</span> Your Founding Member Pricing Today</h2>
                 <h3 className={styles.subheadline}>Only 5 spots remain at this exclusive rate. Once they're gone, pricing returns to $2,500 setup + $697/month. Secure your spot now and lock in $97/month forever.</h3>
 
                 <div className={styles.offerBox}>
