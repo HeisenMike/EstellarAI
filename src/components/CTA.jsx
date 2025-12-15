@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './CTA.module.css';
+import { FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 
 const CTA = () => {
     return (
@@ -64,6 +65,11 @@ const CTA = () => {
             </motion.div>
 
             <footer className={styles.footer}>
+                <div className={styles.socialLinks}>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className={styles.socialIcon}><FaLinkedin /></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className={styles.socialIcon}><FaWhatsapp /></a>
+                    <a href="mailto:contact@estellar.ai" aria-label="Email" className={styles.socialIcon}><FaEnvelope /></a>
+                </div>
                 <p>© 2025 Estellar AI. All Rights Reserved.</p>
             </footer>
         </section>
