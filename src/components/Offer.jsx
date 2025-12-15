@@ -16,7 +16,7 @@ const Offer = () => {
                 <h3 className={styles.subheadline}>This isn't just appointment setting. It's your complete AI office that handles every call, booking, payment, and review automatically.</h3>
 
                 <p className={styles.bodyCopy}>
-                    As a Founding Member, you get priority setup and lock in $97/month forever (regular price: $697/month). Plus, your setup fee is just $97 instead of the standard $2,500 enterprise integration.
+                    As a Founding Member, you get priority setup and lock in $97/month forever (regular price: $697/month). Plus, your setup fee is FREE instead of the standard $2,500 enterprise integration.
                 </p>
 
                 <ul className={styles.list}>
