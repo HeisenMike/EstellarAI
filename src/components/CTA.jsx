@@ -39,7 +39,7 @@ const CTA = () => {
                             </div>
                         </div>
                         <div className={styles.pricingCol}>
-                            <span className={styles.colTitle}>Regular Pricing (returning soon)</span>
+                            <span className={styles.colTitle}>Regular Pricing</span>
                             <div className={styles.priceDetail}>
                                 <span>Setup:</span>
                                 <span className={styles.strike}>$2,500</span>
