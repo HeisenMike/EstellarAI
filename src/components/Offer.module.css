@@ -61,7 +61,7 @@
 }
 
 .bodyCopy {
-    font-size: 1.1rem;
+    font-size: .90rem;
     color: #ccc;
     margin-bottom: 2.5rem;
     line-height: 1.6;
@@ -252,4 +252,10 @@
     margin-top: 1rem;
     font-size: 0.9rem;
     color: #666;
+}
+
+@media (max-width: 768px) {
+    .headline {
+        font-size: 1.8rem;
+    }
 }
