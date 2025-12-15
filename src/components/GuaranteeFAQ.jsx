@@ -38,7 +38,7 @@ const GuaranteeFAQ = () => {
 
                 {/* Guarantee Section */}
                 <div className={styles.guaranteeBox}>
-                    <h2 className={styles.headline}> <span className={styles.lightItalic}>No Risk</span> Guarantee</h2>
+                    <h2 className={styles.headline}> <span className={styles.lightItalic}>No Risk </span> Guarantee</h2>
                     <h3 className={styles.subheadline}>It's easy to say yes.</h3>
                     <p className={styles.text}>
                         I am so confident that Estellar AI will streamline your operations that I offer a complete safety net. You can start with our 14-day free trial to see the results before you pay a dime. Plus, I offer flexible month-to-month plans with no long-term contracts. If you don't love the time you save, simply cancel. No risk, no stress.
