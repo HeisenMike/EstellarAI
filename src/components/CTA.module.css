@@ -1,6 +1,5 @@
 .section {
     padding: 100px 20px 50px;
-    /* Reduced bottom padding for footer */
     background: transparent;
     text-align: center;
     position: relative;
@@ -9,6 +8,20 @@
 .container {
     max-width: 800px;
     margin: 0 auto;
+}
+
+.eyebrow {
+    display: inline-block;
+    background: rgba(168, 85, 247, 0.1);
+    color: #d8b4fe;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .headline {
@@ -24,102 +37,138 @@
 }
 
 .subheadline {
-    font-size: 1.5rem;
-    color: #a46eff;
-    margin-bottom: 2rem;
-    font-weight: 600;
-}
-
-.text {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #ccc;
-    margin-bottom: 3rem;
-    max-width: 600px;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .offerBox {
     background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
+    padding: 40px;
     border-radius: 20px;
     display: inline-block;
     margin-bottom: 3rem;
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
 }
 
 .boxTitle {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #fff;
     margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
+    text-align: center;
 }
 
 .benefitsList {
     list-style: none;
     text-align: left;
-    margin-bottom: 2rem;
-    padding: 0 20px;
+    margin-bottom: 2.5rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .benefitsList li {
     font-size: 1.1rem;
-    color: #ddd;
-    margin-bottom: 10px;
+    color: #eee;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.pricing {
+.pricingComparison {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 1.5rem;
+    padding-top: 2rem;
 }
 
-.priceRow {
+.pricingCol {
+    padding: 15px;
+}
+
+.colTitle {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+.foundingTitle {
+    color: #a46eff;
+}
+
+.priceDetail {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: #eee;
-    padding: 0 20px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.priceVal {
+    font-weight: 600;
+    color: #fff;
+}
+
+.save {
+    color: #4ade80;
+    font-size: 0.9rem;
+    margin-left: 5px;
 }
 
 .strike {
     text-decoration: line-through;
-    color: #777;
-    margin-left: auto;
-    margin-right: 15px;
+    color: #666;
 }
 
-.bold {
-    font-weight: 700;
-    color: #a46eff;
+.urgency {
+    color: #ef4444;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: block;
 }
 
-.perks {
-    /* Removed or hidden */
-    display: none;
+/* Updated CTA Button Styles */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
 
-@keyframes silverShine {
-    0% {
-        background-position: 0% 50%;
+@keyframes spin {
+    from {
+        --angle: 0deg;
     }
 
-    100% {
-        background-position: 200% 50%;
+    to {
+        --angle: 360deg;
     }
 }
 
 .ctaBtn {
-    background: linear-gradient(90deg, #E0E0E0, #FFFFFF, #E0E0E0);
-    background-size: 200% auto;
-    animation: silverShine 3s linear infinite;
+    position: relative;
+    background: transparent;
     color: #000;
     border: none;
     padding: 20px 60px;
@@ -127,21 +176,64 @@
     font-weight: 700;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
-    margin-bottom: 1.5rem;
+    overflow: visible;
+    z-index: 1;
     width: 100%;
     max-width: 400px;
+    transition: transform 0.2s;
+    margin-bottom: 1rem;
+}
+
+.ctaBtn::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: conic-gradient(from var(--angle),
+            transparent 40%,
+            #a855f7,
+            #d8b4fe,
+            #a855f7);
+    border-radius: 50px;
+    animation: spin 3s linear infinite;
+    filter: blur(15px);
+    opacity: 0.8;
+    z-index: -3;
+}
+
+.ctaBtn::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: conic-gradient(from var(--angle),
+            transparent 40%,
+            #a855f7,
+            #d8b4fe,
+            #a855f7);
+    border-radius: 50px;
+    animation: spin 3s linear infinite;
+    z-index: -2;
+}
+
+.btnBg {
+    position: absolute;
+    inset: 1px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.btnText {
+    position: relative;
+    z-index: 1;
 }
 
 .ctaBtn:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
 }
 
 .secureText {
     font-size: 0.9rem;
-    color: #888;
+    color: #666;
     margin-bottom: 4rem;
 }
 
@@ -151,4 +243,16 @@
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     color: #555;
     font-size: 0.9rem;
+}
+
+/* Mobile Responsiveness for Grid */
+@media (max-width: 600px) {
+    .pricingComparison {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .pricingCol {
+        padding: 0;
+    }
 }
