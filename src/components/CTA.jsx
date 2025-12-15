@@ -35,7 +35,10 @@ const CTA = () => {
                             </div>
                             <div className={styles.priceDetail}>
                                 <span>Monthly:</span>
-                                <span className={styles.priceVal}>$97/month + phone usage <span className={styles.save}>(locked in)</span></span>
+                                <div className={styles.priceVal}>
+                                    $97/month + phone usage
+                                    <div className={styles.save}>(locked in)</div>
+                                </div>
                             </div>
                         </div>
                         <div className={styles.pricingCol}>
