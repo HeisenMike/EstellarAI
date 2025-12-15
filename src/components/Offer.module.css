@@ -43,6 +43,12 @@
     -webkit-text-fill-color: transparent;
 }
 
+.lightItalic {
+    font-family: "Instrument Serif", "Inter Placeholder", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
 .subheadline {
     font-size: 1.2rem;
     color: #aaa;
@@ -86,11 +92,17 @@
 }
 
 .trialText {
-    color: #fff;
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     display: block;
+    color: #fff;
+    background: linear-gradient(90deg, #FFFFFF 0%, #A0A0A0 25%, #FFFFFF 50%, #A0A0A0 75%, #FFFFFF 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: silverShine 3s linear infinite;
 }
 
 .thenPrice {

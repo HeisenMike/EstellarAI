@@ -41,7 +41,7 @@ const GuaranteeFAQ = () => {
                     <h2 className={styles.headline}>No Risk Guarantee</h2>
                     <h3 className={styles.subheadline}>It's easy to say yes.</h3>
                     <p className={styles.text}>
-                        We are so confident that Estellar AI will streamline your operations that we offer a complete safety net. You can start with our 14-day free trial to see the results before you pay a dime. Plus, we offer flexible month-to-month plans with no long-term contracts. If you don't love the time you save, simply cancel. No risk, no stress.
+                        I am so confident that Estellar AI will streamline your operations that I offer a complete safety net. You can start with our 14-day free trial to see the results before you pay a dime. Plus, I offer flexible month-to-month plans with no long-term contracts. If you don't love the time you save, simply cancel. No risk, no stress.
                     </p>
                 </div>
 
