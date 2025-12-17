@@ -18,7 +18,8 @@ const blueprintSteps = [
         title: "Zero-Friction Calendar Management",
         desc: "Books, confirms, and reschedules appointments directly into your calendar with real-time sync, automated confirmations, and instant customer notifications.",
         benefit: "Eliminate double-bookings, no-shows, and phone tag completely.",
-        span: "col-span-1"
+        span: "col-span-1",
+        video: "/CalendarService.mp4"
     },
     {
         icon: <LuTrendingUp />,
@@ -77,6 +78,16 @@ const Position = () => {
                             <p className={styles.desc}>{item.desc}</p>
                             <div className={styles.divider}></div>
                             <p className={styles.benefit}><strong>Benefit:</strong> {item.benefit}</p>
+                            {item.video && (
+                                <video
+                                    className={styles.cardVideo}
+                                    src={item.video}
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                />
+                            )}
                         </motion.div>
                     ))}
                 </div>
