@@ -28,7 +28,14 @@ const Solution = () => {
                     </div>
                     <div className={styles.visual}>
                         <div className={styles.videoPlaceholder}>
-                            <div className={styles.playButton} />
+                            <video
+                                src="/demo_final.mp4"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            />
                         </div>
                     </div>
                 </motion.div>
