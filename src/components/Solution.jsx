@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Solution.module.css';
+import demoVideo from '../assets/demo_final.mp4';
 
 const Solution = () => {
     return (
@@ -29,7 +30,7 @@ const Solution = () => {
                     <div className={styles.visual}>
                         <div className={styles.videoPlaceholder}>
                             <video
-                                src="/demo_final.mp4"
+                                src={demoVideo}
                                 autoPlay
                                 muted
                                 loop
