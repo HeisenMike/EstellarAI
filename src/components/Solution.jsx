@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Solution.module.css';
-import demoVideo from '../assets/demo_final.mp4';
+// import demoVideo from '../assets/demo_final.mp4';
 
 const Solution = () => {
     return (
@@ -29,14 +29,17 @@ const Solution = () => {
                     </div>
                     <div className={styles.visual}>
                         <div className={styles.videoPlaceholder}>
-                            <video
+                            {/* <video
                                 src={demoVideo}
                                 autoPlay
                                 muted
                                 loop
                                 playsInline
                                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                            />
+                            /> */}
+                            <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000', color: '#fff' }}>
+                                Demo Video Placeholder
+                            </div>
                         </div>
                     </div>
                 </motion.div>
