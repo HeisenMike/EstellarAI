@@ -64,10 +64,17 @@ const Modal = ({ isOpen, onClose }) => {
                             <FaTimes />
                         </button>
 
-                        <div className={styles.content}>
+                        <div className={styles.iframeContainer}>
                             <iframe
                                 src="https://e.estellarai.com/widget/booking/gsUBga2YFHgiH8YfrmfL"
-                                style={{ width: '100%', border: 'none', minHeight: '800px' }}
+                                style={{
+                                    width: '117.65%', // 1 / 0.85 to compensate for scale
+                                    height: '117.65%',
+                                    border: 'none',
+                                    minHeight: '950px', // Increased to ensure internal content fits
+                                    transform: 'scale(0.85)',
+                                    transformOrigin: 'top left',
+                                }}
                                 id="gsUBga2YFHgiH8YfrmfL_1766680521848"
                                 title="Booking Calendar"
                             ></iframe>
