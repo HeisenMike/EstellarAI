@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Solution.module.css';
-// import demoVideo from '../assets/demo_final.mp4';
+
 
 const Solution = () => {
     return (
@@ -28,18 +28,15 @@ const Solution = () => {
                         </p>
                     </div>
                     <div className={styles.visual}>
-                        <div className={styles.videoPlaceholder}>
-                            {/* <video
-                                src={demoVideo}
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                            /> */}
-                            <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000', color: '#fff' }}>
-                                Demo Video Placeholder
-                            </div>
+                        <div style={{ padding: '61.64% 0 0 0', position: 'relative' }}>
+                            <iframe
+                                src="https://player.vimeo.com/video/1149284805?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameBorder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                                title="Never Miss a Lead Again: Voice AI Receptionist for Home Services (GHL)"
+                            ></iframe>
                         </div>
                     </div>
                 </motion.div>
