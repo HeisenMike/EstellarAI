@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import styles from './Hero.module.css';
 import PixelSwarm from './PixelSwarm';
 
-const Hero = () => {
+const Hero = ({ openModal }) => {
     return (
         <section className={styles.hero}>
             <PixelSwarm />
@@ -24,18 +24,16 @@ const Hero = () => {
                     </p>
 
                     <div className={styles.btnGroup}>
-                        <motion.a
-                            href="https://e.estellarai.com/widget/form/BJ18AT4yGmhl8MrLwA0O"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <motion.button
+                            onClick={openModal}
                             className={styles.primaryBtn}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+                            style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', border: 'none', cursor: 'pointer' }}
                         >
                             <span className={styles.btnBg}></span>
                             <span className={styles.btnText}>Book a Free Strategy Call</span>
-                        </motion.a>
+                        </motion.button>
                         <motion.a
                             href="#demo"
                             className={styles.secondaryBtn}

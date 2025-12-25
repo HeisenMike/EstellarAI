@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import styles from './CTA.module.css';
 import { FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 
-const CTA = () => {
+const CTA = ({ openModal }) => {
     return (
         <section className={styles.section}>
             <motion.div
@@ -57,16 +57,16 @@ const CTA = () => {
                 </div>
 
                 <span className={styles.urgency}>Only 5 Founding Member spots left</span>
-                <a
-                    href="https://e.estellarai.com/widget/form/BJ18AT4yGmhl8MrLwA0O"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <motion.button
+                    onClick={openModal}
                     className={styles.ctaBtn}
-                    style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    style={{ border: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
                 >
                     <span className={styles.btnBg}></span>
                     <span className={styles.btnText}>Book Your Free Strategy Call</span>
-                </a>
+                </motion.button>
                 <p className={styles.secureText}>No credit card required • 30-minute call • Zero sales pressure</p>
             </motion.div>
 

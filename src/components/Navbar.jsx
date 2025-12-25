@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import styles from './Navbar.module.css';
 import logo from '../assets/estellar_logo_v5.png';
 
-const Navbar = () => {
+const Navbar = ({ openModal }) => {
   return (
     <motion.nav
       className={styles.navbar}
@@ -13,15 +13,12 @@ const Navbar = () => {
     >
       <div className={styles.container}>
         <img src={logo} alt="Estellar AI" className={styles.logoImage} />
-        <a
-          href="https://e.estellarai.com/widget/form/BJ18AT4yGmhl8MrLwA0O"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={openModal}
           className={styles.ctaButton}
-          style={{ textDecoration: 'none' }}
         >
           Book A Call
-        </a>
+        </button>
       </div>
     </motion.nav>
   );

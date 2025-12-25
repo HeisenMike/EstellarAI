@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Empathy from './components/Empathy';
@@ -10,13 +10,19 @@ import About from './components/About';
 import GuaranteeFAQ from './components/GuaranteeFAQ';
 import CTA from './components/CTA';
 import Background from './components/Background';
+import Modal from './components/Modal';
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div className="app">
       <Background />
-      <Navbar />
-      <Hero />
+      <Navbar openModal={openModal} />
+      <Hero openModal={openModal} />
       <Empathy />
       <Solution />
       <Position />
@@ -24,7 +30,8 @@ function App() {
       <Offer />
       <About />
       <GuaranteeFAQ />
-      <CTA />
+      <CTA openModal={openModal} />
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 }
