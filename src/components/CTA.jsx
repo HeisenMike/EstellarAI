@@ -22,9 +22,9 @@ const CTA = () => {
                         <li>✓ Complete Custom Setup (normally $2,500) - FREE</li>
                         <li>✓ Priority Onboarding & Training</li>
                         <li>✓ Personalized AI Script Development</li>
-                        <li>✓ 14-Day Free Trial - No Credit Card Required</li>
+                        <li>✓ Founding Member Exclusive Rates</li>
                         <li>✓ Founding Member Priority Support</li>
-                        <li>✓ Price Locked In Forever</li>
+                        <li>✓ Lifetime Price Lock</li>
                     </ul>
 
                     <div className={styles.pricingComparison}>
@@ -37,7 +37,7 @@ const CTA = () => {
                             <div className={styles.priceDetail}>
                                 <span>Monthly:</span>
                                 <div className={styles.priceVal}>
-                                    $97/month + phone usage
+                                    $297/month + phone usage costs
                                     <div className={styles.save}>(locked in)</div>
                                 </div>
                             </div>
@@ -57,10 +57,10 @@ const CTA = () => {
                 </div>
 
                 <span className={styles.urgency}>Only 5 Founding Member spots left</span>
-                <a 
-                    href="https://e.estellarai.com/widget/form/BJ18AT4yGmhl8MrLwA0O" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                <a
+                    href="https://e.estellarai.com/widget/form/BJ18AT4yGmhl8MrLwA0O"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={styles.ctaBtn}
                     style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
                 >
