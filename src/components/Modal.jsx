@@ -68,15 +68,16 @@ const Modal = ({ isOpen, onClose }) => {
                             <iframe
                                 src="https://e.estellarai.com/widget/booking/gsUBga2YFHgiH8YfrmfL"
                                 style={{
-                                    width: '117.65%', // 1 / 0.85 to compensate for scale
-                                    height: '117.65%',
+                                    width: '133.33%', // 1 / 0.75
                                     border: 'none',
-                                    minHeight: '950px', // Increased to ensure internal content fits
-                                    transform: 'scale(0.85)',
+                                    height: '100%',
+                                    minHeight: '800px',
+                                    transform: 'scale(0.75)',
                                     transformOrigin: 'top left',
                                 }}
                                 id="gsUBga2YFHgiH8YfrmfL_1766680521848"
                                 title="Booking Calendar"
+                                scrolling="yes"
                             ></iframe>
                         </div>
                     </motion.div>

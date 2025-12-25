@@ -64,7 +64,7 @@
 
 .iframeContainer {
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; Removed to prevent clipping */
 }
 
 /* Ensure iframe takes full availability */
