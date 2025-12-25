@@ -16,7 +16,7 @@ const Offer = () => {
                 <h3 className={styles.subheadline}>This isn't just appointment setting. It's your complete AI office that handles every call, booking, payment, and review automatically.</h3>
 
                 <p className={styles.bodyCopy}>
-                    As a Founding Member, you get priority setup and lock in $97/month forever (regular price: $697/month). Plus, your setup fee is FREE instead of the standard $2,500 enterprise integration.
+                    As a Founding Member, you get priority setup and lock in $297/month forever (regular price: $697/month). Plus, your setup fee is FREE instead of the standard $2,500 enterprise integration.
                 </p>
 
                 <ul className={styles.list}>
@@ -30,11 +30,28 @@ const Offer = () => {
                 </ul>
 
                 <div className={styles.pricingBox}>
-                    <span className={styles.trialText}>14-Day Free Trial. No setup fees.</span>
-                    <span className={styles.thenPrice}>Then: $97/month + phone usage.</span>
-                    <span className={styles.regularPrice}>(Regular: $2,500 setup + $697/month)</span>
+                    <h4 className={styles.pricingHeader}>🎉 Founding Member Pricing</h4>
+
+                    <div className={styles.pricingMain}>
+                        <span className={styles.currentPrice}>$297/month</span>
+                        <span className={styles.regularPriceLabel}>(regularly $697/month)</span>
+                    </div>
+
                     <div className={styles.lockText}>
-                        🔒 Price locked in forever as Founding Member
+                        🔒 Locked in forever
+                    </div>
+
+                    <div className={styles.includesSection}>
+                        <span className={styles.includesLabel}>Includes:</span>
+                        <ul className={styles.includesList}>
+                            <li>✅ $2,500 custom setup (FREE)</li>
+                            <li>✅ Full implementation</li>
+                            <li>✅ Ongoing support</li>
+                        </ul>
+                    </div>
+
+                    <div className={styles.saveText}>
+                        You Save: <span className={styles.saveHighlight}>$400/month + $2,500 setup</span>
                     </div>
                 </div>
 
