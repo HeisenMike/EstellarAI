@@ -24,14 +24,18 @@ const Hero = () => {
                     </p>
 
                     <div className={styles.btnGroup}>
-                        <motion.button
+                        <motion.a
+                            href="https://e.estellarai.com/widget/form/BJ18AT4yGmhl8MrLwA0O"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className={styles.primaryBtn}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
                         >
                             <span className={styles.btnBg}></span>
                             <span className={styles.btnText}>Book a Free Strategy Call</span>
-                        </motion.button>
+                        </motion.a>
                         <motion.button
                             className={styles.secondaryBtn}
                             whileHover={{ scale: 1.05 }}

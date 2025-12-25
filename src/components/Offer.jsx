@@ -38,10 +38,16 @@ const Offer = () => {
                     </div>
                 </div>
 
-                <button className={styles.ctaBtn}>
+                <a
+                    href="https://e.estellarai.com/widget/form/BJ18AT4yGmhl8MrLwA0O"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.ctaBtn}
+                    style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+                >
                     <span className={styles.btnBg}></span>
                     <span className={styles.btnText}>Book Your Free Strategy Call</span>
-                </button>
+                </a>
                 <p className={styles.ctaSubtext}>No credit card required • Only 5 spots left this month</p>
             </motion.div>
         </section>

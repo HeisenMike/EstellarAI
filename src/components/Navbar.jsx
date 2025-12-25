@@ -13,7 +13,15 @@ const Navbar = () => {
     >
       <div className={styles.container}>
         <img src={logo} alt="Estellar AI" className={styles.logoImage} />
-        <button className={styles.ctaButton}>Book A Call</button>
+        <a
+          href="https://e.estellarai.com/widget/form/BJ18AT4yGmhl8MrLwA0O"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.ctaButton}
+          style={{ textDecoration: 'none' }}
+        >
+          Book A Call
+        </a>
       </div>
     </motion.nav>
   );

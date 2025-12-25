@@ -57,10 +57,16 @@ const CTA = () => {
                 </div>
 
                 <span className={styles.urgency}>Only 5 Founding Member spots left</span>
-                <button className={styles.ctaBtn}>
+                <a 
+                    href="https://e.estellarai.com/widget/form/BJ18AT4yGmhl8MrLwA0O" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className={styles.ctaBtn}
+                    style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+                >
                     <span className={styles.btnBg}></span>
                     <span className={styles.btnText}>Book Your Free Strategy Call</span>
-                </button>
+                </a>
                 <p className={styles.secureText}>No credit card required • 30-minute call • Cancel trial anytime</p>
             </motion.div>
 
