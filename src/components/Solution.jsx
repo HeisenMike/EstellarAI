@@ -41,7 +41,7 @@ const Solution = () => {
                         </p>
                     </div>
                     <div className={styles.visual}>
-                        <div style={{ padding: '61.64% 0 0 0', position: 'relative', width: '100%' }}>
+                        <div style={{ width: '100%', height: '100%', position: 'relative', minHeight: '400px' }}>
                             <iframe
                                 src="https://player.vimeo.com/video/1149284805?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
                                 frameBorder="0"
