@@ -2,8 +2,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Solution.module.css';
 
+// import demoVideo from '../assets/demo_final.mp4';
+import { useEffect } from 'react';
 
 const Solution = () => {
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = "https://player.vimeo.com/api/player.js";
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, []);
+
     return (
         <section className={styles.section}>
             <div className={styles.container}>
@@ -28,13 +41,13 @@ const Solution = () => {
                         </p>
                     </div>
                     <div className={styles.visual}>
-                        <div style={{ padding: '61.64% 0 0 0', position: 'relative' }}>
+                        <div style={{ padding: '61.64% 0 0 0', position: 'relative', width: '100%' }}>
                             <iframe
                                 src="https://player.vimeo.com/video/1149284805?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
                                 frameBorder="0"
                                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                                 referrerPolicy="strict-origin-when-cross-origin"
-                                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '12px' }}
                                 title="Never Miss a Lead Again: Voice AI Receptionist for Home Services (GHL)"
                             ></iframe>
                         </div>
