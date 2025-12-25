@@ -68,7 +68,7 @@
     /* height removed for stretch */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
 .videoPlaceholder {
