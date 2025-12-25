@@ -36,13 +36,15 @@ const Hero = () => {
                             <span className={styles.btnBg}></span>
                             <span className={styles.btnText}>Book a Free Strategy Call</span>
                         </motion.a>
-                        <motion.button
+                        <motion.a
+                            href="#demo"
                             className={styles.secondaryBtn}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
                         >
                             See Demo
-                        </motion.button>
+                        </motion.a>
                     </div>
 
                     <p className={styles.subtext}>No credit card required</p>

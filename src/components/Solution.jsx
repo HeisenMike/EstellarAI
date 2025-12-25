@@ -18,7 +18,7 @@ const Solution = () => {
     }, []);
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id="demo">
             <div className={styles.container}>
                 <motion.div
                     className={styles.wrapper}
