@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Offer.module.css';
 
-const Offer = () => {
+const Offer = ({ openModal }) => {
     return (
         <section className={styles.section}>
             <motion.div
@@ -55,16 +55,16 @@ const Offer = () => {
                     </div>
                 </div>
 
-                <a
-                    href="https://e.estellarai.com/widget/form/BJ18AT4yGmhl8MrLwA0O"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <motion.button
+                    onClick={openModal}
                     className={styles.ctaBtn}
-                    style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    style={{ border: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
                 >
                     <span className={styles.btnBg}></span>
                     <span className={styles.btnText}>Book Your Free Strategy Call</span>
-                </a>
+                </motion.button>
                 <p className={styles.ctaSubtext}>No credit card required • Only 5 spots left this month</p>
             </motion.div>
         </section>

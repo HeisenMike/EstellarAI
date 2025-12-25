@@ -27,7 +27,7 @@ function App() {
       <Solution />
       <Position />
       <Persona />
-      <Offer />
+      <Offer openModal={openModal} />
       <About />
       <GuaranteeFAQ />
       <CTA openModal={openModal} />
