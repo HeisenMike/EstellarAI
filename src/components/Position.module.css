@@ -195,22 +195,42 @@
     transition: opacity 0.3s ease;
 }
 
-/* Hide content when video is visible (on hover) ONLY if the card has a video. 
-   Since I can't easily detect 'has video' without a parent selector or JS class, 
-   I will assume the user wants this behavior for the card with the video.
-   However, strictly speaking, all cards have 'cardVideo' class potentially? 
-   No, only the one with video logic renders it. 
-   But CSS doesn't know about conditional rendering unless I add a class to the card parent.
-   Wait, the previous step added:
-   {item.video && ...}
-   So only the card with video contains .cardVideo.
-   I can use :has() selector if environment supports it (modern browsers do).
-*/
+/* Hide content when video is visible (on hover) ONLY if the card has a video. */
 .card:has(.cardVideo):hover .iconBox,
 .card:has(.cardVideo):hover .stepNum,
 .card:has(.cardVideo):hover .cardTitle,
 .card:has(.cardVideo):hover .desc,
 .card:has(.cardVideo):hover .divider,
 .card:has(.cardVideo):hover .benefit {
+    opacity: 0;
+}
+
+/* Montage Wrapper */
+.montageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Show montage on hover */
+.hasMontage:hover .montageWrapper {
+    opacity: 1;
+    pointer-events: auto;
+    /* Allow interaction if needed, though montage is mostly visual */
+}
+
+/* Hide content when montage is visible */
+.hasMontage:hover .iconBox,
+.hasMontage:hover .stepNum,
+.hasMontage:hover .cardTitle,
+.hasMontage:hover .desc,
+.hasMontage:hover .divider,
+.hasMontage:hover .benefit {
     opacity: 0;
 }

@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { LuPhone, LuCalendar, LuTrendingUp, LuCreditCard, LuStar } from "react-icons/lu";
 import styles from './Position.module.css';
 
+import Montage from './Montage';
+
 const blueprintSteps = [
     {
         icon: <LuPhone />,
@@ -10,7 +12,8 @@ const blueprintSteps = [
         title: "Capture Every Call Instantly",
         desc: "Your AI voice agent answers every call right away, day or night, with natural, human-sounding conversation. It can book, reschedule, and cancel appointments automatically while answering customer inquiries clearly and consistently. The system handles multiple calls at the same time, so every caller is attended to promptly. It collects key details, qualifies leads, and keeps your business responsive even when you are unavailable. This ensures more appointments are booked, more questions are answered, and every opportunity is captured efficiently.",
         benefit: "Capture every emergency job and high-value lead, even at 2 AM.",
-        span: "col-span-2"
+        span: "col-span-2",
+        montage: true
     },
     {
         icon: <LuCalendar />,
@@ -62,7 +65,7 @@ const Position = () => {
                     {blueprintSteps.map((item, index) => (
                         <motion.div
                             key={index}
-                            className={`${styles.card} ${styles[item.span] || ''}`}
+                            className={`${styles.card} ${styles[item.span] || ''} ${item.montage ? styles.hasMontage : ''}`}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             whileHover={{ y: -5, boxShadow: "0 10px 30px rgba(164, 110, 255, 0.15)" }}
@@ -70,6 +73,11 @@ const Position = () => {
                             transition={{ delay: index * 0.1, duration: 0.5 }}
                         >
                             {/* {index === 0 && <PixelHead />} */}
+                            {item.montage && (
+                                <div className={styles.montageWrapper}>
+                                    <Montage />
+                                </div>
+                            )}
                             <div className={styles.iconBox}>
                                 {item.icon}
                             </div>
