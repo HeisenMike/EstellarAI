@@ -179,17 +179,25 @@
     background: transparent;
     color: #000;
     border: none;
-    padding: 20px 60px;
+    padding: 20px 40px;
     font-size: 1.25rem;
     font-weight: 700;
     border-radius: 50px;
     cursor: pointer;
     overflow: visible;
     z-index: 1;
-    width: 100%;
-    max-width: 400px;
+    width: auto;
+    max-width: 100%;
     transition: transform 0.2s;
     margin-bottom: 1rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+    .ctaBtn {
+        padding: 20px 24px;
+        font-size: 1.1rem;
+    }
 }
 
 .ctaBtn::before {
