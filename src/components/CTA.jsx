@@ -67,7 +67,7 @@ const CTA = () => {
                     <span className={styles.btnBg}></span>
                     <span className={styles.btnText}>Book Your Free Strategy Call</span>
                 </a>
-                <p className={styles.secureText}>No credit card required • 30-minute call • Cancel trial anytime</p>
+                <p className={styles.secureText}>No credit card required • 30-minute call • Zero sales pressure</p>
             </motion.div>
 
             <footer className={styles.footer}>
