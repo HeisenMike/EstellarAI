@@ -65,10 +65,27 @@
 
 .visual {
     position: relative;
-    /* height removed for stretch */
     display: flex;
     justify-content: center;
     align-items: stretch;
+}
+
+.videoWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .videoWrapper {
+        position: relative;
+        height: 400px;
+        min-height: unset;
+    }
 }
 
 .videoPlaceholder {
