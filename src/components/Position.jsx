@@ -11,7 +11,13 @@ const blueprintSteps = [
         desc: "Your AI voice agent answers every call right away, day or night, with natural, human-sounding conversation. It can book, reschedule, and cancel appointments automatically while answering customer inquiries clearly and consistently. The system handles multiple calls at the same time, so every caller is attended to promptly. It collects key details, qualifies leads, and keeps your business responsive even when you are unavailable. This ensures more appointments are booked, more questions are answered, and every opportunity is captured efficiently.",
         benefit: "Capture every emergency job and high-value lead, even at 2 AM.",
         span: "col-span-2",
-        video: "/ai voice service card.mp4"
+        video: "/ai voice service card.mp4",
+        thumbnail: "/thumbnails/ai_voice_thumb.jpg",
+        mobileSlides: [
+            "/slides/slide1.png",
+            "/slides/slide2.png",
+            "/slides/slide3.png"
+        ]
     },
     {
         icon: <LuCalendar />,
@@ -20,7 +26,8 @@ const blueprintSteps = [
         desc: "Books, confirms, and reschedules appointments directly into your calendar with real-time sync, automated confirmations, and instant customer notifications.",
         benefit: "Eliminate double-bookings, no-shows, and phone tag completely.",
         span: "col-span-1",
-        video: "/CalendarService.mp4"
+        video: "/CalendarService.mp4",
+        thumbnail: "/thumbnails/calendar_thumb.jpg"
     },
     {
         icon: <LuTrendingUp />,
@@ -29,7 +36,8 @@ const blueprintSteps = [
         desc: "Automatically track every estimate and job from \"New Lead\" to \"Paid Invoice\" on a simple, visual CRM board.",
         benefit: "Turn 70-80% of missed calls into booked appointments.",
         span: "col-span-1",
-        video: "/Pipeline.mp4"
+        video: "/Pipeline.mp4",
+        thumbnail: "/thumbnails/pipeline_thumb.jpg"
     },
     {
         icon: <LuCreditCard />,
@@ -38,7 +46,8 @@ const blueprintSteps = [
         desc: "Sends digital invoices, processes payments, and handles automated payment reminders after every job, including recurring payment setups for plans.",
         benefit: "Reduce outstanding invoices and eliminate awkward payment conversations.",
         span: "col-span-1",
-        video: "/Invoicing.mp4"
+        video: "/Invoicing.mp4",
+        thumbnail: "/thumbnails/invoicing_thumb.jpg"
     },
     {
         icon: <LuStar />,
@@ -47,13 +56,27 @@ const blueprintSteps = [
         desc: "Automatically requests 5-star reviews after successful jobs with smart timing.",
         benefit: "Generate more 5-star reviews, boost reputation, and attract premium customers.",
         span: "col-span-1",
-        video: "/Review Request.mp4"
+        video: "/Review Request.mp4",
+        thumbnail: "/thumbnails/review_thumb.jpg"
     }
 ];
 
 // import PixelHead from './PixelHead';
+import { useState, useEffect } from 'react';
 
 const Position = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     return (
         <section className={styles.section}>
             <div className={styles.container}>
@@ -82,7 +105,9 @@ const Position = () => {
                             <p className={styles.desc}>{item.desc}</p>
                             <div className={styles.divider}></div>
                             <p className={styles.benefit}><strong>Benefit:</strong> {item.benefit}</p>
-                            {item.video && (
+
+                            {/* Video on Desktop, Thumbnail on Mobile */}
+                            {!isMobile && item.video && (
                                 <video
                                     className={styles.cardVideo}
                                     src={item.video}
@@ -91,6 +116,28 @@ const Position = () => {
                                     loop
                                     playsInline
                                 />
+                            )}
+
+                            {isMobile && item.mobileSlides ? (
+                                <div className={styles.carouselContainer}>
+                                    {item.mobileSlides.map((slide, i) => (
+                                        <img
+                                            key={i}
+                                            src={slide}
+                                            className={styles.carouselSlide}
+                                            alt={`${item.title} slide ${i + 1}`}
+                                        />
+                                    ))}
+                                </div>
+                            ) : (
+                                isMobile && item.thumbnail && (
+                                    <img
+                                        src={item.thumbnail}
+                                        className={styles.cardVideo}
+                                        alt={item.title}
+                                        style={{ opacity: 1, objectFit: 'cover' }}
+                                    />
+                                )
                             )}
                         </motion.div>
                     ))}
