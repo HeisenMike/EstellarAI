@@ -296,4 +296,18 @@
     .headline {
         font-size: 1.8rem;
     }
+
+    .pricingHeader {
+        font-size: 1.25rem;
+    }
+
+    .pricingBox {
+        padding: 24px 20px;
+    }
+
+    .ctaBtn {
+        padding: 16px 24px;
+        font-size: 1rem;
+        width: 100%;
+    }
 }
