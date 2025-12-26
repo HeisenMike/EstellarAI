@@ -14,9 +14,9 @@ const blueprintSteps = [
         video: "/ai voice service card.mp4",
         thumbnail: "/thumbnails/ai_voice_thumb.jpg",
         mobileSlides: [
-            "/slides/slide1.png",
+            "/slides/slide1_v2.png",
             "/slides/slide2.png",
-            "/slides/slide3.png"
+            "/slides/slide3_v2.png"
         ]
     },
     {
