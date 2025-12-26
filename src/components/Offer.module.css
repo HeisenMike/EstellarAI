@@ -197,37 +197,6 @@
     gap: 10px;
 }
 
-@keyframes silverShine {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 200% 50%;
-    }
-}
-
-@keyframes rotate {
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-@property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
-
-@keyframes spin {
-    from {
-        --angle: 0deg;
-    }
-
-    to {
-        --angle: 360deg;
-    }
-}
 
 .ctaBtn {
     position: relative;

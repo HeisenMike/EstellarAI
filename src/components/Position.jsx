@@ -43,7 +43,6 @@ const blueprintSteps = [
         benefit: "Turn 70-80% of missed calls into booked appointments.",
         span: "col-span-1",
         video: "/Pipeline.mp4",
-        video: "/Pipeline.mp4",
         thumbnail: "/thumbnails/pipeline_thumb.jpg",
         mobileSlides: [
             "/slides/pipeline_slide1.png",
@@ -59,7 +58,6 @@ const blueprintSteps = [
         benefit: "Reduce outstanding invoices and eliminate awkward payment conversations.",
         span: "col-span-1",
         video: "/Invoicing.mp4",
-        video: "/Invoicing.mp4",
         thumbnail: "/thumbnails/invoicing_thumb.jpg",
         mobileSlides: [
             "/slides/invoicing_slide1.png"
@@ -73,7 +71,6 @@ const blueprintSteps = [
         desc: "Automatically requests 5-star reviews after successful jobs with smart timing.",
         benefit: "Generate more 5-star reviews, boost reputation, and attract premium customers.",
         span: "col-span-1",
-        video: "/Review Request.mp4",
         video: "/Review Request.mp4",
         thumbnail: "/thumbnails/review_thumb.jpg",
         mobileSlides: [

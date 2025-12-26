@@ -95,31 +95,6 @@
     margin-bottom: 1.5rem;
 }
 
-@keyframes silverShine {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 200% 50%;
-    }
-}
-
-@property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
-
-@keyframes spin {
-    from {
-        --angle: 0deg;
-    }
-
-    to {
-        --angle: 360deg;
-    }
-}
 
 .primaryBtn {
     position: relative;
