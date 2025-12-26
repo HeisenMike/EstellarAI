@@ -128,28 +128,25 @@
     isolation: isolate;
 }
 
-@media (min-width: 769px) {
+.primaryBtn::before,
+.primaryBtn::after {
+    content: '';
+    position: absolute;
+    inset: -1.5px;
+    /* Thinner border */
+    background: conic-gradient(from var(--angle),
+            transparent 0% 50%,
+            #a855f7 50% 100%);
+    border-radius: 50px;
+    animation: 3s spin linear infinite;
+    z-index: -2;
+    /* Behind the button background */
+}
 
-    .primaryBtn::before,
-    .primaryBtn::after {
-        content: '';
-        position: absolute;
-        inset: -1.5px;
-        /* Thinner border */
-        background: conic-gradient(from var(--angle),
-                transparent 0% 50%,
-                #a855f7 50% 100%);
-        border-radius: 50px;
-        animation: 3s spin linear infinite;
-        z-index: -2;
-        /* Behind the button background */
-    }
-
-    .primaryBtn::before {
-        filter: blur(15px);
-        /* Glow effect */
-        opacity: 0.8;
-    }
+.primaryBtn::before {
+    filter: blur(15px);
+    /* Glow effect */
+    opacity: 0.8;
 }
 
 .btnBg {
