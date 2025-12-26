@@ -235,7 +235,7 @@
     .ctaBtn::before {
         content: '';
         position: absolute;
-        inset: -1.5px;
+        inset: -1px;
         /* Thinner border */
         background: conic-gradient(from var(--angle),
                 transparent 0% 50%,
@@ -250,7 +250,7 @@
     .ctaBtn::after {
         content: '';
         position: absolute;
-        inset: -1.5px;
+        inset: -1px;
         /* Thinner border */
         background: conic-gradient(from var(--angle),
                 transparent 0% 50%,
