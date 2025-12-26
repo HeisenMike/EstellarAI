@@ -189,6 +189,8 @@
     transition: transform 0.2s;
     margin-bottom: 1rem;
     white-space: nowrap;
+    isolation: isolate;
+    /* Create new stacking context */
 }
 
 @media (max-width: 480px) {
@@ -201,7 +203,8 @@
 .ctaBtn::before {
     content: '';
     position: absolute;
-    inset: -4px;
+    inset: -6px;
+    /* Larger glow */
     background: conic-gradient(from var(--angle),
             transparent 40%,
             #a855f7,
@@ -211,13 +214,14 @@
     animation: spin 3s linear infinite;
     filter: blur(15px);
     opacity: 0.8;
-    z-index: -3;
+    z-index: -2;
 }
 
 .ctaBtn::after {
     content: '';
     position: absolute;
-    inset: -1px;
+    inset: -2px;
+    /* Thicker border base */
     background: conic-gradient(from var(--angle),
             transparent 40%,
             #a855f7,
@@ -225,20 +229,21 @@
             #a855f7);
     border-radius: 50px;
     animation: spin 3s linear infinite;
-    z-index: -2;
+    z-index: -1;
 }
 
 .btnBg {
     position: absolute;
-    inset: 1px;
+    inset: 2px;
+    /* White bg starts inside */
     background: #FFFFFF;
     border-radius: 50px;
-    z-index: -1;
+    z-index: 0;
 }
 
 .btnText {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .ctaBtn:hover {
