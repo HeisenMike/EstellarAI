@@ -176,7 +176,17 @@
     color: #ccc;
     margin-bottom: auto;
     /* Push benefit to bottom */
+    /* Push benefit to bottom */
     line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
 }
 
 .divider {
