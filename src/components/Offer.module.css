@@ -297,6 +297,14 @@
         font-size: 1.8rem;
     }
 
+    .card {
+        padding: 30px 15px;
+    }
+
+    .currentPrice {
+        font-size: 1.8rem;
+    }
+
     .pricingHeader {
         font-size: 1.25rem;
     }
