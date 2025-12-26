@@ -166,6 +166,79 @@ const MobileCarousel = ({ slides, objectFit = "contain" }) => {
     );
 };
 
+const ServiceCard = ({ item, index, isMobile }) => {
+    const [showCarousel, setShowCarousel] = useState(false);
+
+    const handleMobileClick = () => {
+        if (isMobile) {
+            setShowCarousel(!showCarousel);
+        }
+    };
+
+    return (
+        <motion.div
+            className={`${styles.card} ${styles[item.span] || ''}`}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -5, boxShadow: "0 10px 30px rgba(164, 110, 255, 0.15)" }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
+            onClick={handleMobileClick}
+            style={{ cursor: isMobile ? 'pointer' : 'default' }}
+        >
+            <div className={styles.iconBox}>
+                {item.icon}
+            </div>
+            <p className={styles.stepNum}>{item.step}</p>
+            <h4 className={styles.cardTitle}>{item.title}</h4>
+            <p className={styles.desc}>{item.desc}</p>
+            <div className={styles.divider}></div>
+            <p className={styles.benefit}><strong>Benefit:</strong> {item.benefit}</p>
+
+            {/* Video on Desktop */}
+            {!isMobile && item.video && (
+                <video
+                    className={styles.cardVideo}
+                    src={item.video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                />
+            )}
+
+            {/* Carousel/Image logic on Mobile */}
+            <AnimatePresence>
+                {isMobile && showCarousel && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 20 }}
+                    >
+                        {item.mobileSlides ? (
+                            <MobileCarousel
+                                slides={item.mobileSlides}
+                                objectFit={item.mobileObjectFit || "contain"}
+                            />
+                        ) : (
+                            item.thumbnail && (
+                                <img
+                                    src={item.thumbnail}
+                                    className={styles.cardVideo}
+                                    alt={item.title}
+                                    style={{ opacity: 1, objectFit: 'cover' }}
+                                />
+                            )
+                        )}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </motion.div>
+    );
+};
+
 // Main Component
 const Position = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -190,53 +263,7 @@ const Position = () => {
 
                 <div className={styles.bentoGrid}>
                     {blueprintSteps.map((item, index) => (
-                        <motion.div
-                            key={index}
-                            className={`${styles.card} ${styles[item.span] || ''}`}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            whileHover={isMobile ? {} : { y: -5, boxShadow: "0 10px 30px rgba(164, 110, 255, 0.15)" }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
-                        >
-                            {/* {index === 0 && <PixelHead />} */}
-                            <div className={styles.iconBox}>
-                                {item.icon}
-                            </div>
-                            <p className={styles.stepNum}>{item.step}</p>
-                            <h4 className={styles.cardTitle}>{item.title}</h4>
-                            <p className={styles.desc}>{item.desc}</p>
-                            <div className={styles.divider}></div>
-                            <p className={styles.benefit}><strong>Benefit:</strong> {item.benefit}</p>
-
-                            {/* Video on Desktop, Thumbnail on Mobile */}
-                            {!isMobile && item.video && (
-                                <video
-                                    className={styles.cardVideo}
-                                    src={item.video}
-                                    autoPlay
-                                    muted
-                                    loop
-                                    playsInline
-                                />
-                            )}
-
-                            {isMobile && item.mobileSlides ? (
-                                <MobileCarousel
-                                    slides={item.mobileSlides}
-                                    objectFit={item.mobileObjectFit || "contain"}
-                                />
-                            ) : (
-                                isMobile && item.thumbnail && (
-                                    <img
-                                        src={item.thumbnail}
-                                        className={styles.cardVideo}
-                                        alt={item.title}
-                                        style={{ opacity: 1, objectFit: 'cover' }}
-                                    />
-                                )
-                            )}
-                        </motion.div>
+                        <ServiceCard key={index} item={item} index={index} isMobile={isMobile} />
                     ))}
                 </div>
             </div>
