@@ -12,11 +12,20 @@ import CTA from './components/CTA';
 import Background from './components/Background';
 import Modal from './components/Modal';
 
+import ChatWidget from './components/ChatWidget';
+
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showChat, setShowChat] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const handleGuaranteeInView = () => {
+    if (!showChat) {
+      setShowChat(true);
+    }
+  };
 
   return (
     <div className="app">
@@ -29,9 +38,10 @@ function App() {
       <Persona />
       <Offer openModal={openModal} />
       <About />
-      <GuaranteeFAQ />
+      <GuaranteeFAQ onInView={handleGuaranteeInView} />
       <CTA openModal={openModal} />
       <Modal isOpen={isModalOpen} onClose={closeModal} />
+      {showChat && <ChatWidget />}
     </div>
   );
 }

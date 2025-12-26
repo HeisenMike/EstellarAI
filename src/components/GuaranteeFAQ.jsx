@@ -25,7 +25,7 @@ const faqs = [
     }
 ];
 
-const GuaranteeFAQ = () => {
+const GuaranteeFAQ = ({ onInView }) => {
     const [activeIndex, setActiveIndex] = useState(null);
 
     const toggleFAQ = (index) => {
@@ -37,13 +37,17 @@ const GuaranteeFAQ = () => {
             <div className={styles.container}>
 
                 {/* Guarantee Section */}
-                <div className={styles.guaranteeBox}>
+                <motion.div
+                    className={styles.guaranteeBox}
+                    onViewportEnter={() => onInView && onInView()}
+                    viewport={{ once: true, amount: 0.1 }}
+                >
                     <h2 className={styles.headline}> <span className={styles.lightItalic}>No Risk </span> Guarantee</h2>
                     <h3 className={styles.subheadline}>It's easy to say yes.</h3>
                     <p className={styles.text}>
                         We believe successful partnerships are built on trust, not obligations. That’s why we waived the standard $2,500 setup fee and strictly operate on month-to-month plans. You get a fully built AI infrastructure with zero upfront risk. If you don't love the time you save, you can simply cancel. No contracts, no stress.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* FAQ Section */}
                 <div className={styles.faqSection}>
@@ -85,7 +89,7 @@ const GuaranteeFAQ = () => {
                 </div>
 
             </div>
-        </section>
+        </section >
     );
 };
 
