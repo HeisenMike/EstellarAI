@@ -33,7 +33,7 @@
     position: absolute;
     top: 15px;
     right: 15px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.6);
     border: none;
     font-size: 24px;
     cursor: pointer;
@@ -49,7 +49,7 @@
 }
 
 .closeButton:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.8);
     transform: rotate(90deg);
 }
 
