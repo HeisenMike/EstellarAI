@@ -195,7 +195,7 @@ const Position = () => {
                             className={`${styles.card} ${styles[item.span] || ''}`}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            whileHover={{ y: -5, boxShadow: "0 10px 30px rgba(164, 110, 255, 0.15)" }}
+                            whileHover={isMobile ? {} : { y: -5, boxShadow: "0 10px 30px rgba(164, 110, 255, 0.15)" }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
                         >

@@ -184,8 +184,22 @@
     .desc {
         display: -webkit-box;
         -webkit-line-clamp: 3;
+        line-clamp: 3;
+        /* Standard property */
         -webkit-box-orient: vertical;
         overflow: hidden;
+    }
+
+    /* Performance Optimizations */
+    .iconBox {
+        box-shadow: none !important;
+        /* Remove heavy shadow */
+        background: rgba(255, 255, 255, 0.05) !important;
+    }
+
+    .iconBox svg {
+        filter: none !important;
+        /* Remove expensive filter */
     }
 }
 
