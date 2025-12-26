@@ -27,7 +27,12 @@ const blueprintSteps = [
         benefit: "Eliminate double-bookings, no-shows, and phone tag completely.",
         span: "col-span-1",
         video: "/CalendarService.mp4",
-        thumbnail: "/thumbnails/calendar_thumb.jpg"
+        thumbnail: "/thumbnails/calendar_thumb.jpg",
+        mobileSlides: [
+            "/slides/calendar_slide1.png",
+            "/slides/calendar_slide2.png"
+        ],
+        mobileObjectFit: "cover"
     },
     {
         icon: <LuTrendingUp />,
@@ -88,7 +93,7 @@ const swipePower = (offset, velocity) => {
     return Math.abs(offset) * velocity;
 };
 
-const MobileCarousel = ({ slides }) => {
+const MobileCarousel = ({ slides, objectFit = "contain" }) => {
     const [[page, direction], setPage] = useState([0, 0]);
 
     // We only have 3 images, so we cycle them 0 -> 1 -> 2 -> 0
@@ -127,6 +132,7 @@ const MobileCarousel = ({ slides }) => {
                     }}
                     className={styles.carouselSlide}
                     alt="Service slide"
+                    style={{ objectFit: objectFit }}
                 />
             </AnimatePresence>
 
@@ -199,7 +205,10 @@ const Position = () => {
                             )}
 
                             {isMobile && item.mobileSlides ? (
-                                <MobileCarousel slides={item.mobileSlides} />
+                                <MobileCarousel
+                                    slides={item.mobileSlides}
+                                    objectFit={item.mobileObjectFit || "contain"}
+                                />
                             ) : (
                                 isMobile && item.thumbnail && (
                                     <img
