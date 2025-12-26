@@ -231,9 +231,7 @@
 .btnBg {
     position: absolute;
     inset: 1px;
-    background: linear-gradient(90deg, #E0E0E0, #FFFFFF, #E0E0E0);
-    background-size: 200% auto;
-    animation: silverShine 3s linear infinite;
+    background: #FFFFFF;
     border-radius: 50px;
     z-index: -1;
 }
