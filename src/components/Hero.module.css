@@ -30,7 +30,13 @@
     border-radius: 20px;
     font-size: 0.85rem;
     color: #ccc;
-    backdrop-filter: blur(10px);
+    backdrop-filter: none;
+}
+
+@media (min-width: 769px) {
+    .badge {
+        backdrop-filter: blur(10px);
+    }
 }
 
 .title {
@@ -190,10 +196,15 @@
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    backdrop-filter: blur(10px);
     transition: all 0.2s ease;
     position: relative;
     overflow: hidden;
+}
+
+@media (min-width: 769px) {
+    .secondaryBtn {
+        backdrop-filter: blur(10px);
+    }
 }
 
 .secondaryBtn::before {
