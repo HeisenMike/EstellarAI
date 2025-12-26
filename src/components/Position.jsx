@@ -43,7 +43,13 @@ const blueprintSteps = [
         benefit: "Turn 70-80% of missed calls into booked appointments.",
         span: "col-span-1",
         video: "/Pipeline.mp4",
-        thumbnail: "/thumbnails/pipeline_thumb.jpg"
+        video: "/Pipeline.mp4",
+        thumbnail: "/thumbnails/pipeline_thumb.jpg",
+        mobileSlides: [
+            "/slides/pipeline_slide1.png",
+            "/slides/pipeline_slide2.png"
+        ],
+        mobileObjectFit: "cover"
     },
     {
         icon: <LuCreditCard />,
