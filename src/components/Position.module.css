@@ -95,6 +95,12 @@
     opacity: 1;
 }
 
+@media (max-width: 768px) {
+    .cardVideo {
+        object-fit: contain;
+    }
+}
+
 /* Specific Span Classes */
 .col-span-2 {
     grid-column: span 2;
