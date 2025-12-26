@@ -12,7 +12,9 @@ const Navbar = ({ openModal }) => {
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className={styles.container}>
-        <img src={logo} alt="Estellar AI" className={styles.logoImage} />
+        <a href="/" aria-label="Home">
+          <img src={logo} alt="Estellar AI" className={styles.logoImage} />
+        </a>
         <button
           onClick={openModal}
           className={styles.ctaButton}
