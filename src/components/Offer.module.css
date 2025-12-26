@@ -1,3 +1,19 @@
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
 .section {
     padding: 100px 20px;
     background: transparent;
@@ -215,34 +231,34 @@
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.ctaBtn::before {
-    content: '';
-    position: absolute;
-    inset: -4px;
-    background: conic-gradient(from var(--angle),
-            transparent 40%,
-            #a855f7,
-            #d8b4fe,
-            #a855f7);
-    border-radius: 50px;
-    animation: spin 3s linear infinite;
-    filter: blur(15px);
-    opacity: 0.8;
-    z-index: -3;
-}
+@media (min-width: 769px) {
+    .ctaBtn::before {
+        content: '';
+        position: absolute;
+        inset: -1.5px;
+        /* Thinner border */
+        background: conic-gradient(from var(--angle),
+                transparent 0% 50%,
+                #a855f7 50% 100%);
+        border-radius: 50px;
+        animation: spin 3s linear infinite;
+        filter: blur(15px);
+        opacity: 0.8;
+        z-index: -3;
+    }
 
-.ctaBtn::after {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    background: conic-gradient(from var(--angle),
-            transparent 40%,
-            #a855f7,
-            #d8b4fe,
-            #a855f7);
-    border-radius: 50px;
-    animation: spin 3s linear infinite;
-    z-index: -2;
+    .ctaBtn::after {
+        content: '';
+        position: absolute;
+        inset: -1.5px;
+        /* Thinner border */
+        background: conic-gradient(from var(--angle),
+                transparent 0% 50%,
+                #a855f7 50% 100%);
+        border-radius: 50px;
+        animation: spin 3s linear infinite;
+        z-index: -2;
+    }
 }
 
 .btnBg {

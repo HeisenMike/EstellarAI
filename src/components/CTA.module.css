@@ -1,3 +1,19 @@
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
 .section {
     padding: 100px 20px 50px;
     background: transparent;
@@ -192,25 +208,28 @@
     isolation: isolate;
 }
 
-.ctaBtn::before,
-.ctaBtn::after {
-    content: '';
-    position: absolute;
-    inset: -3px;
-    /* Creates the border width */
-    background: conic-gradient(from var(--angle),
-            transparent 0% 50%,
-            #a855f7 50% 100%);
-    border-radius: 50px;
-    animation: 3s spin linear infinite;
-    z-index: -2;
-    /* Behind the button background */
-}
+@media (min-width: 769px) {
 
-.ctaBtn::before {
-    filter: blur(15px);
-    /* Glow effect */
-    opacity: 0.8;
+    .ctaBtn::before,
+    .ctaBtn::after {
+        content: '';
+        position: absolute;
+        inset: -1.5px;
+        /* Thinner border */
+        background: conic-gradient(from var(--angle),
+                transparent 0% 50%,
+                #a855f7 50% 100%);
+        border-radius: 50px;
+        animation: 3s spin linear infinite;
+        z-index: -2;
+        /* Behind the button background */
+    }
+
+    .ctaBtn::before {
+        filter: blur(15px);
+        /* Glow effect */
+        opacity: 0.8;
+    }
 }
 
 .btnBg {
