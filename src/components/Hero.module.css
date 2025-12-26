@@ -98,8 +98,7 @@
 
 .primaryBtn {
     position: relative;
-    background: #FFFFFF;
-    /* Solid background to mask the gradient center */
+    background: transparent;
     color: #000;
     border: none;
     padding: 16px 40px;
@@ -110,6 +109,7 @@
     z-index: 1;
     /* Establish stacking context */
     transition: transform 0.2s, box-shadow 0.2s;
+    isolation: isolate;
 }
 
 .primaryBtn::before,
@@ -126,7 +126,7 @@
             #a855f7);
     border-radius: 50px;
     animation: spin 3s linear infinite;
-    z-index: -1;
+    z-index: -2;
     /* Behind the button background */
 }
 
@@ -137,13 +137,18 @@
 }
 
 .btnBg {
-    display: none;
-    /* No longer needed */
+    position: absolute;
+    inset: 1px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    z-index: -1;
+    /* Above gradient, below text */
+    display: block;
 }
 
 .btnText {
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .primaryBtn:hover {
