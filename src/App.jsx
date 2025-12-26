@@ -11,7 +11,6 @@ import GuaranteeFAQ from './components/GuaranteeFAQ';
 import CTA from './components/CTA';
 import Background from './components/Background';
 import Modal from './components/Modal';
-import Footer from './components/Footer';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,7 +31,6 @@ function App() {
       <About />
       <GuaranteeFAQ />
       <CTA openModal={openModal} />
-      <Footer />
       <Modal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
