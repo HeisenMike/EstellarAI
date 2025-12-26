@@ -119,12 +119,13 @@
     inset: -3px;
     /* Creates the border width */
     background: conic-gradient(from var(--angle),
-            transparent,
             #a855f7,
-            transparent,
+            #d8b4fe,
+            #7c3aed,
+            #c084fc,
             #a855f7);
     border-radius: 50px;
-    animation: spin 3s linear infinite;
+    animation: 3s spin linear infinite;
     z-index: -2;
     /* Behind the button background */
 }
