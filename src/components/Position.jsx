@@ -59,7 +59,12 @@ const blueprintSteps = [
         benefit: "Reduce outstanding invoices and eliminate awkward payment conversations.",
         span: "col-span-1",
         video: "/Invoicing.mp4",
-        thumbnail: "/thumbnails/invoicing_thumb.jpg"
+        video: "/Invoicing.mp4",
+        thumbnail: "/thumbnails/invoicing_thumb.jpg",
+        mobileSlides: [
+            "/slides/invoicing_slide1.png"
+        ],
+        mobileObjectFit: "cover"
     },
     {
         icon: <LuStar />,
@@ -69,7 +74,12 @@ const blueprintSteps = [
         benefit: "Generate more 5-star reviews, boost reputation, and attract premium customers.",
         span: "col-span-1",
         video: "/Review Request.mp4",
-        thumbnail: "/thumbnails/review_thumb.jpg"
+        video: "/Review Request.mp4",
+        thumbnail: "/thumbnails/review_thumb.jpg",
+        mobileSlides: [
+            "/slides/review_slide1.png"
+        ],
+        mobileObjectFit: "cover"
     }
 ];
 
