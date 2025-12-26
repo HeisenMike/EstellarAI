@@ -262,6 +262,8 @@
     /* Hide scrollbar */
     scrollbar-width: none;
     -ms-overflow-style: none;
+    background: #000;
+    /* Ensure text is hidden behind images */
 }
 
 .carouselContainer::-webkit-scrollbar {
@@ -271,6 +273,7 @@
 .carouselSlide {
     min-width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    /* Show full image without cropping */
     scroll-snap-align: center;
 }
