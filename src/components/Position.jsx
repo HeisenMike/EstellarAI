@@ -17,7 +17,8 @@ const blueprintSteps = [
             "/slides/slide1_v2.png",
             "/slides/slide2.png",
             "/slides/slide3_v2.png"
-        ]
+        ],
+        mobileObjectFit: "cover"
     },
     {
         icon: <LuCalendar />,
@@ -29,8 +30,8 @@ const blueprintSteps = [
         video: "/CalendarService.mp4",
         thumbnail: "/thumbnails/calendar_thumb.jpg",
         mobileSlides: [
-            "/slides/calendar_slide1.png",
-            "/slides/calendar_slide2.png"
+            "/slides/calendar_slide1_v2.png",
+            "/slides/calendar_slide2_v2.png"
         ],
         mobileObjectFit: "cover"
     },
