@@ -199,10 +199,9 @@
     inset: -3px;
     /* Creates the border width */
     background: conic-gradient(from var(--angle),
+            transparent,
             #a855f7,
-            #d8b4fe,
-            #a855f7,
-            #d8b4fe,
+            transparent,
             #a855f7);
     border-radius: 50px;
     animation: spin 3s linear infinite;
