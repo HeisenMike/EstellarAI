@@ -56,9 +56,6 @@
     font-style: italic !important;
 }
 
-.videoWrapper {
-    display: none;
-}
 
 @media (max-width: 768px) {
     .wrapper {
