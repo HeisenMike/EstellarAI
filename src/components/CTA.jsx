@@ -85,7 +85,7 @@ const CTA = ({ openModal }) => {
                 <div className={styles.socialLinks}>
                     <a href="https://www.linkedin.com/in/jan-michael-estrella" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className={styles.socialIcon}><FaLinkedin /></a>
                     <a href="https://wa.me/971566233690" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className={styles.socialIcon}><FaWhatsapp /></a>
-                    <a href="mailto:contact@e.estellar.com" aria-label="Email" className={styles.socialIcon}><FaEnvelope /></a>
+                    <a href="mailto:contact@e.estellarai.com" aria-label="Email" className={styles.socialIcon}><FaEnvelope /></a>
                 </div>
                 <p>© 2025 Estellar AI. All Rights Reserved.</p>
                 <div className={styles.legalLinks}>
